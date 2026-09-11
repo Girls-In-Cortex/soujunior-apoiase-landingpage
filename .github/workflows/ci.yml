@@ -60,7 +60,7 @@ jobs:
 
       - name: Instalar dependências de validação (ESLint e Lighthouse)
         run: |
-          npm install -g eslint @lhci/cli static-server
+          npm install -g eslint @lhci/cli http-server
 
       - name: 1. Executar Lint (Análise de código JS)
         run: |
@@ -68,13 +68,15 @@ jobs:
           npx eslint . --no-error-on-unmatched-pattern || echo "Aviso: Nenhum erro crítico de lint encontrado."
 
       - name: 2. Checagem de Links Quebrados
+        if: hashFiles('**/*.html') != ''
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           args: --verbose --no-progress './**/*.html'
 
       - name: 3. Executar Auditoria do Lighthouse
+        if: hashFiles('frontend/index.html') != ''
         run: |
-          npx static-server -p 8080 ./frontend &
+          npx http-server ./frontend -p 8080 &
           sleep 3
           npx lhci collect --url=http://localhost:8080/index.html --numberOfRuns=1
 
