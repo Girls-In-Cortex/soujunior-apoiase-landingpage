@@ -225,15 +225,12 @@ O CI roda Lighthouse e validação de HTML a cada pull request. Cada seção é 
 
 A SouJunior não possui manual de marca publicado. A identidade foi reconstruída a partir do código em produção da organização, e sobre ela foi criada uma camada específica de campanha.
 
-**Arquivo no Figma:** _inserir link_
-
-| Página do arquivo | O que traz |
-|---|---|
-| Identidade original | Procedência de cada valor, cores e tipografia extraídas do repositório oficial da SouJunior, divergências encontradas entre as fontes e o que a marca não possuía |
-| Identidade adaptada | O que foi criado para a campanha e o raciocínio de cada decisão, com todos os contrastes calculados |
-| Guia para devs | Tokens, tipografia, espaçamento, componentes e âncoras, em formato de consulta rápida |
-| Wireframe | Estrutura de blocos em baixa fidelidade, mobile e desktop |
-| Landing Page | Protótipo final em mobile e desktop, mais o estado aberto do menu |
+| Página do arquivo | O que traz | Link direto |
+|---|---|---|
+| Identidade Visual | Dois quadros. O primeiro traz a identidade original: procedência de cada valor, cores e tipografia extraídas do repositório oficial da SouJunior, divergências encontradas entre as fontes e o que a marca não possuía. O segundo traz a identidade adaptada: o que foi criado para a campanha e o raciocínio de cada decisão, com todos os contrastes calculados | [Abrir Identidade Visual](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=0-1) |
+| Guia para devs | Tokens, tipografia, espaçamento, componentes e âncoras, em formato de consulta rápida | [Abrir Guia](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=164-2) |
+| Wireframe | Estrutura de blocos em baixa fidelidade, mobile e desktop | [Abrir Wireframe](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=174-2) |
+| Landing Page | Protótipo final em mobile e desktop, mais o estado aberto do menu | [Abrir Protótipo](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=125-2) |
 
 ### O que foi mantido da marca
 
@@ -398,7 +395,7 @@ Front-end e back-end são publicados em serviços separados. O back-end libera C
     </tr>
     <tr>
       <td align="center" width="120px">
-        <a href="https://github.com/USUARIO"><img src="https://github.com/USUARIO.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Nome</b></sub><br><sub>Função</sub></a><br><a href="https://linkedin.com/in/LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/SamaraAlanna"><img src="https://github.com/SamaraAlanna.png" width="70px" style="border-radius: 50%;" alt="Samara Alanna"/><br><sub><b>Samara Alanna</b></sub><br><sub>UX/UI</sub><br><sub>Design System</sub></a><br><a href="https://www.linkedin.com/in/samaraalanna/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
         <a href="https://github.com/USUARIO"><img src="https://github.com/USUARIO.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Nome</b></sub><br><sub>Função</sub></a><br><a href="https://linkedin.com/in/LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
