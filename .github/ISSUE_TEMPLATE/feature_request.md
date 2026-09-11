@@ -1,3 +1,11 @@
+---
+name: "Nova Funcionalidade"
+about: "Solicitar ou descrever uma nova funcionalidade para o projeto"
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees: ''
+---
+
 ## Funcionalidade
 <!-- Explicação simples de qual problema essa funcionalidade resolve/ou qual valor adiciona ao projeto -->
 
@@ -14,7 +22,6 @@
 - [ ] Criar estrutura HTML do formulário
 - [ ] Aplicar estilos CSS (responsivo)
 - [ ] Criar função JS para capturar o envio e validar os campos
-
 
 ## Prioridade
 <!-- Marque com um X a urgência desta funcionalidade para o projeto -->

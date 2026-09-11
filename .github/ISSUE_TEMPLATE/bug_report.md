@@ -1,3 +1,11 @@
+---
+name: "Bug Report"
+about: "Reportar um problema ou comportamento inesperado no projeto"
+title: "[BUG] "
+labels: ["bug"]
+assignees: ''
+---
+
 ## Descrição do Bug
 <!-- Explica o que está ocorrendo de forma explicíta. -->
 
