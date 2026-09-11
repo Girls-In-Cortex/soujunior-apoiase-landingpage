@@ -151,7 +151,7 @@ Actions
         <a href="https://github.com/JustBruder"><img src="https://github.com/JustBruder.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Ingrid Bruder (Dazai)</b></sub><br><sub>Backend</sub><br><sub>Segurança/DevSecOps</sub></a><br><a href="https://www.linkedin.com/in/ingrid-bruder"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
-        <a href="https://github.com/NOME_USUARIO"><img src="https://github.com/NOME_USUARIO.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Nome 3</b></sub><br><sub>Funcao</sub></a><br><a href="https://linkedin.com/in/SEU-LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/alananjos06"><img src="https://github.com/alananjos06.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Alana Anjos</b></sub><br><sub>Front End</sub></a><br><a href="https://linkedin.com/in/alana-anjos-aga222"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
     </tr>
     <tr>
