@@ -1,0 +1,278 @@
+/* ==========================================================================
+   base.css
+   Reset, tipografia base, acessibilidade e utilitários de layout.
+
+   Este arquivo é compartilhado. Não edite sem avisar o time:
+   qualquer mudança aqui afeta as nove seções.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   RESET
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Rolagem suave nas âncoras. Desligada mais abaixo para quem
+     prefere menos movimento. */
+  scroll-behavior: smooth;
+  /* Impede que a seção fique escondida atrás do cabeçalho fixo */
+  scroll-padding-top: var(--altura-cabecalho);
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--fs-body);
+  line-height: var(--leading-loose);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  /* Evita rolagem lateral causada por elemento decorativo */
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* O atributo hidden precisa vencer qualquer display definido depois.
+   Sem isso, o painel do menu fica sempre visível. */
+[hidden] {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   TIPOGRAFIA
+   -------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-heading);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+}
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+}
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+}
+h4 {
+  font-size: var(--fs-h4);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-normal);
+}
+
+p {
+  max-width: var(--measure);
+}
+
+a {
+  color: var(--color-action-hover);
+}
+
+strong {
+  font-weight: var(--weight-semibold);
+}
+
+/* --------------------------------------------------------------------------
+   ACESSIBILIDADE
+   -------------------------------------------------------------------------- */
+
+/* Foco visível em tudo que é interativo.
+   Nunca remova o outline sem colocar outro no lugar. */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: var(--stroke-focus) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
+}
+
+/* Link para pular direto ao conteúdo, primeiro elemento focável da página */
+.pular-para-conteudo {
+  position: absolute;
+  left: -9999px;
+}
+
+.pular-para-conteudo:focus {
+  left: var(--space-4);
+  top: var(--space-4);
+  z-index: 100;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-bg);
+  border: var(--stroke-2) solid var(--color-heading);
+  border-radius: var(--radius);
+}
+
+/* Esconde visualmente, mas mantém para leitor de tela */
+.apenas-leitor-de-tela {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respeita quem configurou menos movimento no sistema */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   LAYOUT
+   -------------------------------------------------------------------------- */
+
+/* Centraliza o conteúdo e aplica o respiro lateral.
+   Use dentro de cada seção. */
+.container {
+  width: 100%;
+  max-width: var(--content-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Respiro vertical padrão de seção.
+   Use min-height, nunca height fixa, se precisar definir altura. */
+.secao {
+  padding-block: var(--section-padding);
+}
+
+/* Variações de fundo. Aplique junto com .secao. */
+.secao--cinza {
+  background-color: var(--color-surface);
+}
+.secao--azul {
+  background-color: var(--color-surface-accent);
+}
+.secao--navy {
+  background-color: var(--color-heading);
+}
+.secao--ambar {
+  background-color: var(--color-highlight);
+}
+
+/* Em fundo escuro, o texto inverte */
+.secao--navy,
+.secao--navy p {
+  color: var(--color-text-on-brand);
+}
+
+.secao--navy h2,
+.secao--navy h3,
+.secao--navy h4 {
+  color: var(--color-text-on-brand);
+}
+
+.secao--navy a {
+  color: var(--color-link-on-dark);
+}
+
+/* Em fundo âmbar, o texto é o quase preto */
+.secao--ambar,
+.secao--ambar h2,
+.secao--ambar p {
+  color: var(--color-on-highlight);
+}
+
+/* --------------------------------------------------------------------------
+   BOTÕES
+   Componente compartilhado. Altura sempre 48px, raio 4, borda de 2px.
+   -------------------------------------------------------------------------- */
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--control-height);
+  padding-inline: var(--space-6);
+  font-family: inherit;
+  font-size: var(--fs-body);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  text-decoration: none;
+  cursor: pointer;
+  border: var(--stroke-2) solid var(--color-heading);
+  border-radius: var(--radius);
+  transition: background-color 0.15s ease;
+}
+
+/* Principal: um por seção, no máximo */
+.botao--principal {
+  background-color: var(--color-action);
+  color: var(--color-text-on-brand);
+  box-shadow: var(--shadow);
+}
+
+.botao--principal:hover {
+  background-color: var(--color-action-hover);
+}
+
+/* Secundário: ação alternativa, sem sombra */
+.botao--secundario {
+  background-color: var(--color-bg);
+  color: var(--color-heading);
+}
+
+.botao--secundario:hover {
+  background-color: var(--color-surface);
+}
+
+.botao:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* --------------------------------------------------------------------------
+   CARTÃO
+   Base compartilhada. Cada seção ajusta o que precisar no próprio arquivo.
+   -------------------------------------------------------------------------- */
+
+.cartao {
+  padding: var(--space-6);
+  background-color: var(--color-bg);
+  border: var(--stroke-2) solid var(--color-heading);
+  border-radius: var(--radius);
+}
+
+@media (min-width: 64rem) {
+  .cartao {
+    padding: var(--space-8);
+  }
+}

@@ -1,0 +1,163 @@
+/* ==========================================================================
+   tokens.css
+   Design tokens da landing page.
+   Todos os valores vêm do guia para devs no Figma.
+
+   REGRA: nunca escreva valor solto no CSS das seções. Use sempre a variável.
+   Se precisar de um valor que não existe aqui, fale com a Samara antes de criar.
+   ========================================================================== */
+
+:root {
+  /* ----------------------------------------------------------------------
+     CORES PRIMITIVAS
+     São as cores cruas da marca. Não use direto nas seções:
+     use os tokens semânticos mais abaixo.
+     ---------------------------------------------------------------------- */
+
+  /* Azuis da marca SouJunior */
+  --brand-900: #00205f;
+  --brand-600: #0c4987;
+  --brand-500: #046ad0;
+  --brand-300: #95c6ff;
+
+  /* Âmbar: cor de acento criada para esta campanha */
+  --accent-400: #ffb020;
+  --accent-700: #b25e00;
+
+  /* Neutros */
+  --neutral-950: #171123;
+  --neutral-600: #666666;
+  --neutral-150: #ededed;
+  --neutral-50: #f9f9f9;
+  --neutral-0: #ffffff;
+
+  /* Estados */
+  --danger-600: #c62828;
+  --success-700: #0e7a0c;
+
+  /* ----------------------------------------------------------------------
+     CORES SEMÂNTICAS
+     Use estas no CSS das seções. O nome diz a função, não a cor.
+     ---------------------------------------------------------------------- */
+
+  --color-bg: var(--neutral-0); /* fundo de página e de cartão */
+  --color-surface: var(--neutral-50); /* fundo de seção cinza */
+  --color-surface-accent: var(--brand-300); /* fundo de seção azul claro */
+
+  --color-heading: var(--brand-900); /* títulos, bordas de 2px e tag */
+  --color-text: var(--neutral-950); /* texto corrido */
+  --color-text-muted: var(--neutral-600); /* legenda e texto de apoio */
+  --color-text-on-brand: var(--neutral-0); /* texto sobre navy, azul ou botão */
+
+  --color-action: var(--brand-500); /* fundo do botão principal */
+  --color-action-hover: var(--brand-600); /* botão principal no hover */
+
+  --color-border: var(--brand-900); /* borda de campo de formulário */
+  --color-divider: var(--neutral-150); /* régua e divisor */
+  --color-focus: var(--brand-900); /* anel de foco */
+
+  --color-link-on-dark: var(--brand-300); /* link sobre fundo navy */
+
+  --color-danger: var(--danger-600); /* erro de formulário */
+  --color-success: var(--success-700);
+
+  /* Campanha: o âmbar marca valor e decisão.
+     Nunca é fundo de botão: branco sobre ele dá 1.83:1 e reprova. */
+  --color-highlight: var(--accent-400); /* CTA final, plano destacado e chip */
+  --color-on-highlight: var(--neutral-950); /* texto sobre o âmbar */
+  --color-accent-text: var(--accent-700); /* âmbar em texto pequeno, uso restrito */
+
+  /* ----------------------------------------------------------------------
+     TIPOGRAFIA
+     Radio Canada, via Google Fonts. Pesos 400, 600 e 700.
+     A raiz fica em 16px: nunca troque para 10px.
+     ---------------------------------------------------------------------- */
+
+  --font-family: 'Radio Canada', system-ui, -apple-system, sans-serif;
+
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Escala fluida. O termo em rem dentro do clamp preserva o zoom até 200%.
+     Nunca use só vw, senão o texto para de responder ao zoom do navegador. */
+  --fs-h1: clamp(2rem, 1.4rem + 3vw, 3.5rem); /* 32px a 56px */
+  --fs-h2: clamp(1.75rem, 1.4rem + 1.8vw, 2.5rem); /* 28px a 40px */
+  --fs-h3: 1.5rem; /* 24px */
+  --fs-h4: 1.25rem; /* 20px */
+  --fs-lead: 1.125rem; /* 18px */
+  --fs-body: 1rem; /* 16px, nunca menor em texto corrido */
+  --fs-caption: 0.875rem; /* 14px */
+
+  --leading-tight: 1.2; /* h1 e h2 */
+  --leading-snug: 1.3; /* h3 */
+  --leading-normal: 1.4; /* h4 */
+  --leading-relaxed: 1.5; /* lead e legenda */
+  --leading-loose: 1.6; /* texto corrido */
+
+  --measure: 65ch; /* largura máxima de linha em texto corrido */
+
+  /* ----------------------------------------------------------------------
+     ESPAÇAMENTO
+     Escala base 4px. Escolhida porque casa com o alvo de toque de 44px.
+     ---------------------------------------------------------------------- */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* Respiro vertical das seções. Trocado no breakpoint de desktop. */
+  --section-padding: var(--space-16);
+  --hero-padding: var(--space-16);
+
+  /* Respiro lateral e largura de conteúdo */
+  --gutter: var(--space-4);
+  --content-width: 1120px;
+
+  /* Altura do cabeçalho fixo. Serve para a âncora não parar
+     atrás dele. Ajustar quando o cabeçalho estiver construído. */
+  --altura-cabecalho: 80px;
+
+  /* ----------------------------------------------------------------------
+     FORMA
+     ---------------------------------------------------------------------- */
+
+  --radius: 4px; /* cartão, botão e campo */
+  --radius-md: 8px; /* bloco grande, uso pontual */
+  --radius-pill: 999px; /* apenas tag e etiqueta */
+
+  --stroke-1: 1px; /* divisor */
+  --stroke-2: 2px; /* cartão, botão e campo */
+  --stroke-focus: 3px; /* anel de foco */
+  --focus-offset: 2px;
+
+  /* Sombra dura, sem desfoque. Só no botão principal e no plano destacado. */
+  --shadow-offset: 4px;
+  --shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--color-heading);
+
+  /* Altura mínima de elemento interativo. Acima dos 44px exigidos. */
+  --control-height: 48px;
+}
+
+/* ==========================================================================
+   BREAKPOINT DE DESKTOP
+   Mobile primeiro: aqui só aumentamos respiro e sombra.
+   Os tamanhos de fonte já são fluidos e não precisam de media query.
+   ========================================================================== */
+
+@media (min-width: 64rem) {
+  /* 1024px */
+  :root {
+    --section-padding: var(--space-24);
+    --hero-padding: var(--space-32);
+    --gutter: var(--space-8);
+    --shadow-offset: 6px;
+  }
+}
