@@ -406,7 +406,7 @@ Front-end e back-end são publicados em serviços separados. O back-end libera C
     </tr>
     <tr>
       <td align="center" width="120px">
-        <a href="https://github.com/USUARIO"><img src="https://github.com/USUARIO.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Nome</b></sub><br><sub>Função</sub></a><br><a href="https://linkedin.com/in/LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/Gasparini-11"><img src="https://github.com/gasparini.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Nome</b></sub><br><sub>Função</sub></a><br><a href="https://www.linkedin.com/in/rafaella-de-jesus-gasparini-086414251/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
         <a href="https://github.com/kamathias89"><img src="https://github.com/kamathias89" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Karina Mathias</b></sub><br><sub>QA</sub></a><br><a href="https://www.linkedin.com/in/kamathias/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
