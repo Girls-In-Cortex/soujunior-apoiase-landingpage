@@ -406,10 +406,10 @@ Front-end e back-end são publicados em serviços separados. O back-end libera C
     </tr>
     <tr>
       <td align="center" width="120px">
-        <a href="https://github.com/Gasparini-11"><img src="https://github.com/gasparini.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Nome</b></sub><br><sub>Função</sub></a><br><a href="https://www.linkedin.com/in/rafaella-de-jesus-gasparini-086414251/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/Gasparini-11"><img src="https://github.com/gasparini-11.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Nome</b></sub><br><sub>Função</sub></a><br><a href="https://www.linkedin.com/in/rafaella-de-jesus-gasparini"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
-        <a href="https://github.com/kamathias89"><img src="https://github.com/kamathias89" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Karina Mathias</b></sub><br><sub>QA</sub></a><br><a href="https://www.linkedin.com/in/kamathias/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/kamathias89"><img src="https://github.com/kamathias89.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Karina Mathias</b></sub><br><sub>QA</sub></a><br><a href="https://www.linkedin.com/in/kamathias/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
         <a href="https://github.com/eucarolsevero"><img src="https://github.com/eucarolsevero.png" width="70px" style="border-radius: 50%;" alt="Carol Severo"/><br><sub><b>Carol Severo</b></sub><br><sub>Mentora</sub></a><br><a href="https://www.linkedin.com/in/eucarolsevero"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
