@@ -412,6 +412,9 @@ Front-end e back-end são publicados em serviços separados. O back-end libera C
         <a href="https://github.com/kamathias89"><img src="https://github.com/kamathias89.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Karina Mathias</b></sub><br><sub>QA</sub></a><br><a href="https://www.linkedin.com/in/kamathias/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
+        <td align="center" width="120px">
+  <a href="https://github.com/paulahcarvalho"><img src="https://github.com.png" width="70px" style="border-radius: 50%;" alt="Paula Carvalho"/><br /><sub><b>Paula Carvalho</b></sub></a><br /><sub>PO/PM Júnior</sub><br /><a href="https://linkedin.com"><img src="https://shields.io" height="15px"/></a>
+</td>
         <a href="https://github.com/eucarolsevero"><img src="https://github.com/eucarolsevero.png" width="70px" style="border-radius: 50%;" alt="Carol Severo"/><br><sub><b>Carol Severo</b></sub><br><sub>Mentora</sub></a><br><a href="https://www.linkedin.com/in/eucarolsevero"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
     </tr>
