@@ -9,7 +9,8 @@
 .settings/
 
 # === MAVEN (Backend Java) ===
-**/target/
+target/
+back-parceria/target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -35,7 +36,9 @@ build/
 .DS_Store
 Thumbs.db
 
-# === ARQUIVOS DE AMBIENTE ===
+# === ARQUIVOS DE AMBIENTE E SEGURANÇA ===
 .env
 .env.local
 .env.*.local
+back-parceria/.env
+frontend/.env
