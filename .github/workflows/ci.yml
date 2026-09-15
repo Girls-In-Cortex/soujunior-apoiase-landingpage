@@ -27,6 +27,7 @@ jobs:
 
       - name: Compilar e Testar com Maven
         if: hashFiles('**/pom.xml') != ''
+        working-directory: back-parceria
         env:
           PORT: ${{ secrets.PORT }}
           ALLOWED_ORIGIN: ${{ secrets.ALLOWED_ORIGIN }}
