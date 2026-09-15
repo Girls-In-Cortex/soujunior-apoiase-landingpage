@@ -7,12 +7,9 @@
     <title>Apoie a SouJunior a partir de R$ 2,00</title>
     <meta
       name="description"
-      content="A SouJunior é mantida por voluntários e por quem contribui com pouco, todo mês. A partir de R$ 2,00 você entra nessa conta."
+      content="R$ 2,00 mantêm a SouJunior no ar por quase 4 horas. A comunidade é mantida por voluntários e por quem contribui com pouco, todo mês."
     />
 
-    <!-- Preview do link no WhatsApp, Discord e LinkedIn.
-       A URL da imagem precisa ser absoluta, senão o preview não carrega.
-       TROCAR o domínio quando o deploy estiver definido. -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Apoie a SouJunior a partir de R$ 2,00" />
     <meta
@@ -20,18 +17,18 @@
       content="Mentoria gratuita e projetos open source para quem está começando em tecnologia."
     />
     <!-- TODO: descomentar e trocar DOMINIO quando o deploy estiver definido.
-         Sem isso o preview de link não carrega no WhatsApp, Discord e LinkedIn.
-    <meta property="og:image" content="https://DOMINIO/assets/img/og-image.png">
-    <meta property="og:url" content="https://DOMINIO">
-    <meta name="twitter:card" content="summary_large_image">
-    -->
+       Sem isso o preview de link não carrega no WhatsApp, Discord e LinkedIn.
+  <meta property="og:image" content="https://DOMINIO/assets/img/og-image.png">
+  <meta property="og:url" content="https://DOMINIO">
+  <meta name="twitter:card" content="summary_large_image">
+  -->
 
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;600;700&family=Funnel+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -57,7 +54,7 @@
     <!-- ===================================================================
        CABEÇALHO  ·  #header  ·  Maria
        Desktop: logo, cinco âncoras e o botão Apoiar.
-       Mobile: logo e o botão de menu. O painel abre em tela cheia.
+       Mobile: logo e o botão de menu.
        =================================================================== -->
     <header class="cabecalho" id="header">
       <div class="container cabecalho__interno">
@@ -73,19 +70,19 @@
             <li><a href="#planos">Planos</a></li>
             <li><a href="#parceria">Empresas</a></li>
           </ul>
+          <a
+            class="botao botao--principal"
+            href="https://apoia.se/soujunior"
+            target="_blank"
+            rel="noopener"
+            aria-label="Apoiar a SouJunior no Apoia.se, abre em nova aba"
+            >Apoiar</a
+          >
         </nav>
 
-        <a
-          class="botao botao--principal cabecalho__cta"
-          href="https://apoia.se/soujunior"
-          target="_blank"
-          rel="noopener"
-          aria-label="Apoiar a SouJunior no Apoia.se, abre em nova aba"
-          >Apoiar</a
-        >
-
-        <!-- Só aparece no mobile. Precisa de foco preso, fechar com Esc
-           e travar a rolagem do fundo enquanto estiver aberto. -->
+        <!-- Só no mobile. Precisa de foco preso, fechar com Esc e travar a rolagem.
+           Qualquer display na .menu-mobile sobrescreve o atributo hidden:
+           alterne por classe. -->
         <button
           class="cabecalho__menu"
           type="button"
@@ -99,7 +96,6 @@
         </button>
       </div>
 
-      <!-- Painel do menu no mobile: as mesmas âncoras, o CTA e os canais -->
       <div class="menu-mobile" id="menu-mobile" hidden>
         <div class="container">
           <button class="menu-mobile__fechar" type="button" aria-label="Fechar menu"></button>
@@ -116,27 +112,8 @@
             target="_blank"
             rel="noopener"
           >
-            Apoiar a partir de R$ 2,00
+            Apoiar no Apoia.se
           </a>
-          <ul class="menu-mobile__canais">
-            <li>
-              <a href="https://apoia.se/soujunior" target="_blank" rel="noopener">Apoia.se</a>
-            </li>
-            <li>
-              <a href="https://discord.gg/FkBcf3vdQZ" target="_blank" rel="noopener">Discord</a>
-            </li>
-            <li>
-              <a
-                href="https://chat.whatsapp.com/JJzCMlqMKlw1YOhOk7QB3W"
-                target="_blank"
-                rel="noopener"
-                >WhatsApp</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/SouJunior" target="_blank" rel="noopener">GitHub</a>
-            </li>
-          </ul>
         </div>
       </div>
     </header>
@@ -144,31 +121,41 @@
     <main id="conteudo" tabindex="-1">
       <!-- ===================================================================
          ABERTURA  ·  #hero  ·  Maria
-         Conteúdo centralizado. Um CTA só.
+         Fundo cinza do kit. Dois botões no desktop, um no mobile.
+         O mascote Juno é decorativo: aria-hidden e não pode gerar
+         rolagem horizontal.
          =================================================================== -->
-      <section class="secao secao--azul hero" id="hero">
+      <section class="secao secao--cinza hero" id="hero">
         <div class="container hero__interno">
-          <h1>Apoiar também é participar.</h1>
-          <p class="hero__apoio">
-            A SouJunior é mantida por voluntários e por quem contribui com pouco, todo mês. A partir
-            de R$ 2,00 você entra nessa conta.
-          </p>
-          <a
-            class="botao botao--principal"
-            href="https://apoia.se/soujunior"
-            target="_blank"
-            rel="noopener"
-            aria-label="Apoiar a partir de dois reais no Apoia.se, abre em nova aba"
-          >
-            Apoiar a partir de R$ 2,00
-          </a>
+          <div class="hero__texto">
+            <h1>R$ 2,00 mantêm a SouJunior no ar por quase 4 horas.</h1>
+            <p class="hero__apoio">
+              A SouJunior é mantida por voluntários e por quem contribui com pouco, todo mês. A
+              partir de R$ 2,00 você entra nessa conta.
+            </p>
+            <div class="hero__acoes">
+              <a
+                class="botao botao--principal"
+                href="https://apoia.se/soujunior"
+                target="_blank"
+                rel="noopener"
+                aria-label="Apoiar no Apoia.se, abre em nova aba"
+                >Apoiar no Apoia.se</a
+              >
+              <!-- Segundo botão só no desktop -->
+              <a class="botao botao--secundario hero__secundario" href="#quem-somos"
+                >O que é a SouJunior</a
+              >
+            </div>
+          </div>
+
+          <img class="hero__mascote" src="assets/img/mascote-juno.svg" alt="" aria-hidden="true" />
         </div>
       </section>
 
       <!-- ===================================================================
          O QUE É A SOUJUNIOR  ·  #quem-somos  ·  Rafaella
          Dois blocos: as quatro formas de participar e as áreas de atuação.
-         O papel de apoiador é o destacado e vem primeiro.
          =================================================================== -->
       <section class="secao quem-somos" id="quem-somos">
         <div class="container">
@@ -185,19 +172,19 @@
             <li class="quem-somos__papel quem-somos__papel--destaque">
               <span class="tag">Você entra aqui</span>
               <h4>Apoiador</h4>
-              <p>Sustenta a estrutura financeiramente. Qualquer pessoa pode ser.</p>
+              <p>Sustenta a infraestrutura que mantém tudo no ar.</p>
             </li>
             <li class="quem-somos__papel">
               <h4>Mentorado</h4>
-              <p>Recebe mentoria e é acompanhado nas atividades do time.</p>
+              <p>Recebe acompanhamento de quem já está na área.</p>
             </li>
             <li class="quem-somos__papel">
               <h4>Mentor</h4>
-              <p>Acompanha juniores por pelo menos seis meses.</p>
+              <p>Doa tempo e experiência para quem está começando.</p>
             </li>
             <li class="quem-somos__papel">
               <h4>Head</h4>
-              <p>Lidera uma frente do projeto, voluntariamente.</p>
+              <p>Conduz uma das onze frentes da comunidade.</p>
             </li>
           </ul>
 
@@ -221,7 +208,6 @@
       <!-- ===================================================================
          PARA ONDE VAI A DOAÇÃO  ·  #causa  ·  Rafaella
          Dois cartões lado a lado no desktop, empilhados no mobile.
-         O segundo tem fundo azul claro.
          =================================================================== -->
       <section class="secao secao--cinza causa" id="causa">
         <div class="container">
@@ -296,8 +282,10 @@
          O filete âmbar acima de cada número é decorativo: faça em CSS,
          com ::before, e não como elemento no HTML.
 
-         Os valores ficam escritos aqui como reserva. Se a chamada à API
-         do GitHub falhar, eles continuam visíveis e a seção não quebra.
+         Os quatro números foram informados pela organização do hackathon e
+         ficam escritos aqui no HTML.
+         Não há chamada de API: o impacto.js cuida só do contador, quando a
+         seção entra na tela.
 
          No layout o número aparece acima do rótulo, mas no HTML o dt vem
          primeiro porque é a ordem exigida pela tag dl. Inverta na exibição
@@ -311,20 +299,20 @@
 
           <dl class="impacto__numeros">
             <div class="impacto__dado">
-              <dt>Repositórios</dt>
-              <dd class="impacto__valor" data-github="repositorios">50</dd>
+              <dt>Membros da comunidade</dt>
+              <dd class="impacto__valor">120</dd>
             </div>
             <div class="impacto__dado">
-              <dt>Seguidores nas redes</dt>
-              <dd class="impacto__valor">120k</dd>
+              <dt>Mentores ativos</dt>
+              <dd class="impacto__valor">35</dd>
             </div>
             <div class="impacto__dado">
-              <dt>Juniores contratados</dt>
-              <dd class="impacto__valor">45</dd>
+              <dt>Pessoas empregadas</dt>
+              <dd class="impacto__valor">+50</dd>
             </div>
             <div class="impacto__dado">
-              <dt>Voluntários ativos</dt>
-              <dd class="impacto__valor">23</dd>
+              <dt>Apoiadores</dt>
+              <dd class="impacto__valor">108</dd>
             </div>
           </dl>
         </div>
@@ -332,15 +320,16 @@
 
       <!-- ===================================================================
          ESCOLHA UM VALOR  ·  #planos  ·  Rafaella
-         Três cartões. O de R$ 2 é o destacado: fundo âmbar, sombra dura
-         e a tag. Os botões ficam alinhados na base dos três cartões.
+         Três cartões. O de R$ 2 é o destacado: âmbar, sombra dura e tag.
+         Cada valor é traduzido em tempo de infraestrutura no ar.
          =================================================================== -->
       <section class="secao planos" id="planos">
         <div class="container">
           <div class="titulo-secao">
             <h2>Escolha um valor</h2>
             <p>
-              Valor único ou contribuição mensal, direto no Apoia.se. Você cancela quando quiser.
+              Cada valor traduzido em tempo de infraestrutura no ar, a partir do custo médio diário
+              de R$ 12,77.
             </p>
           </div>
 
@@ -349,7 +338,7 @@
               <div class="plano__conteudo">
                 <span class="tag">Sugerido</span>
                 <h3 class="plano__valor">R$ 2</h3>
-                <p>O menor valor possível. Somado ao de outras pessoas, paga a infraestrutura.</p>
+                <p>4 horas da SouJunior no ar.</p>
               </div>
               <a
                 class="botao botao--principal"
@@ -364,7 +353,7 @@
             <li class="cartao plano">
               <div class="plano__conteudo">
                 <h3 class="plano__valor">R$ 10</h3>
-                <p>Cobre a hospedagem de um dos projetos da comunidade por um mês.</p>
+                <p>24h da SouJunior no ar.</p>
               </div>
               <a
                 class="botao botao--secundario"
@@ -379,9 +368,7 @@
             <li class="cartao plano">
               <div class="plano__conteudo">
                 <h3 class="plano__valor">R$ 25</h3>
-                <p>
-                  Mantém uma frente inteira ativa: mentorias, revisão de código e infraestrutura.
-                </p>
+                <p>2 dias inteiros da SouJunior no ar.</p>
               </div>
               <a
                 class="botao botao--secundario"
@@ -398,79 +385,222 @@
 
       <!-- ===================================================================
          EMPRESAS E PATROCÍNIO  ·  #parceria  ·  Alana
-         Formulário centralizado, 560px no desktop e largura cheia no mobile.
-         O rótulo fica sempre visível, nunca só como placeholder.
-         No erro: a borda muda de cor E aparece mensagem de texto.
-         Envio para POST /parceria. Ver o contrato no README.
+         Duas colunas no desktop: texto mais contatos à esquerda,
+         formulário à direita. Empilhado no mobile.
+
+         ATENÇÃO, mudou o contrato com o back:
+         obrigatórios  -> nome, email, interesse (pelo menos uma opção)
+         opcionais     -> empresa, mensagem
+         O campo interesse é uma lista, não um texto.
          =================================================================== -->
       <section class="secao secao--azul parceria" id="parceria">
         <div class="container parceria__interno">
-          <form class="cartao parceria__form" novalidate>
+          <div class="parceria__texto">
             <div class="titulo-secao">
-              <h2>Empresas e patrocínio</h2>
+              <h2>Entre em contato</h2>
               <p>
-                Se a sua empresa quer apoiar a SouJunior ou contratar quem está começando, envie uma
-                proposta por aqui. A organização responde direto para você com as formas de
-                patrocínio disponíveis.
+                Patrocínio, créditos de infraestrutura, horas de mentoria do seu time ou contratar
+                quem está começando. Marque no formulário o que faz sentido para a sua empresa e a
+                organização responde direto para você.
               </p>
             </div>
 
-            <div class="parceria__campos">
-              <div class="campo">
-                <label for="nome">Nome</label>
-                <input
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  placeholder="Como podemos te chamar"
-                  required
-                />
-                <!-- <p class="campo__erro">mensagem de erro</p> -->
-              </div>
+            <div class="parceria__contatos">
+              <h3>Onde a SouJunior está</h3>
+              <dl class="parceria__lista">
+                <div>
+                  <dt>Parcerias</dt>
+                  <dd><a href="mailto:parcerias@soujunior.tech">parcerias@soujunior.tech</a></dd>
+                </div>
+                <div>
+                  <dt>Site</dt>
+                  <dd>
+                    <a
+                      href="https://soujunior.tech"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Site da SouJunior, abre em nova aba"
+                      >soujunior.tech</a
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>LinkedIn</dt>
+                  <dd>
+                    <a
+                      href="https://linkedin.com/company/soujunior"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="LinkedIn da SouJunior, abre em nova aba"
+                      >linkedin.com/company/soujunior</a
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>Instagram</dt>
+                  <dd>
+                    <a
+                      href="https://instagram.com/soujunior.tech"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Instagram da SouJunior, abre em nova aba"
+                      >@soujunior.tech</a
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>YouTube</dt>
+                  <dd>
+                    <a
+                      href="https://youtube.com/@soujuniortech"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="YouTube da SouJunior, abre em nova aba"
+                      >@soujuniortech</a
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>GitHub</dt>
+                  <dd>
+                    <a
+                      href="https://github.com/SouJunior"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="GitHub da SouJunior, abre em nova aba"
+                      >github.com/SouJunior</a
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>Discord</dt>
+                  <dd>
+                    <a
+                      href="https://discord.gg/FkBcf3vdQZ"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Discord da SouJunior, abre em nova aba"
+                      >Comunidade e dúvidas</a
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>WhatsApp</dt>
+                  <dd>
+                    <a
+                      href="https://chat.whatsapp.com/JJzCMlqMKlw1YOhOk7QB3W"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Grupo de WhatsApp da SouJunior, abre em nova aba"
+                      >Grupo de avisos</a
+                    >
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
 
-              <div class="campo">
-                <label for="empresa">Empresa</label>
-                <input
-                  type="text"
-                  id="empresa"
-                  name="empresa"
-                  placeholder="Nome da empresa"
-                  required
-                />
-              </div>
+          <form class="cartao parceria__form" novalidate>
+            <div class="campo">
+              <label for="empresa">Nome da empresa (opcional)</label>
+              <input
+                type="text"
+                id="empresa"
+                name="empresa"
+                placeholder="Ex: SouJunior Tecnologia"
+              />
+            </div>
 
-              <div class="campo">
-                <label for="email">E-mail corporativo</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="voce@empresa.com.br"
-                  required
-                />
-              </div>
+            <div class="campo">
+              <label for="nome">Nome do contato</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Como podemos te chamar"
+                required
+              />
+            </div>
 
-              <div class="campo">
-                <label for="mensagem">Mensagem</label>
-                <textarea
-                  id="mensagem"
-                  name="mensagem"
-                  rows="4"
-                  placeholder="O que você tem em mente"
-                  required
-                ></textarea>
-              </div>
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="nome@empresa.com.br"
+                required
+              />
+            </div>
+
+            <!-- Grupo de caixas: precisa de fieldset e legend, senão o leitor de
+               tela não relaciona as opções à pergunta. -->
+            <fieldset class="campo campo--grupo">
+              <legend>Interesse</legend>
+              <p class="campo__ajuda" id="ajuda-interesse">Marque pelo menos uma opção</p>
+              <ul class="parceria__opcoes" aria-describedby="ajuda-interesse">
+                <li>
+                  <input
+                    type="checkbox"
+                    id="interesse-patrocinio"
+                    name="interesse"
+                    value="patrocinio"
+                  />
+                  <label for="interesse-patrocinio">Patrocínio</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="interesse-infra"
+                    name="interesse"
+                    value="infraestrutura"
+                  />
+                  <label for="interesse-infra">Infraestrutura ou ferramentas</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="interesse-mentoria"
+                    name="interesse"
+                    value="mentoria"
+                  />
+                  <label for="interesse-mentoria">Mentoria voluntária</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="interesse-contratar"
+                    name="interesse"
+                    value="contratar"
+                  />
+                  <label for="interesse-contratar">Contratar juniores</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="interesse-outra" name="interesse" value="outra" />
+                  <label for="interesse-outra">Outra parceria</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <div class="campo">
+              <label for="mensagem">Mensagem (opcional)</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="4"
+                placeholder="Conte o que você tem em mente"
+              ></textarea>
             </div>
 
             <button class="botao botao--principal" type="submit">Enviar proposta</button>
 
             <p class="parceria__nota">
-              Todos os campos são obrigatórios. Usamos esses dados apenas para responder à sua
-              proposta.
+              Os campos sem a marcação de opcional são obrigatórios. Usamos esses dados apenas para
+              responder à sua proposta.
             </p>
 
             <!-- Mensagem de sucesso ou de erro do envio.
-               Precisa de aria-live para o leitor de tela anunciar. -->
+               O aria-live faz o leitor de tela anunciar sem mudar o foco. -->
             <p class="parceria__retorno" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -478,11 +608,12 @@
 
       <!-- ===================================================================
          FECHAMENTO  ·  #cta  ·  Maria
-         Faixa âmbar com título e um botão.
+         Faixa âmbar com título, linha de apoio e um botão.
          =================================================================== -->
       <section class="secao secao--ambar cta-final" id="cta">
         <div class="container cta-final__interno">
           <h2>Para a SouJunior continuar, precisamos de você.</h2>
+          <p>Menos que um café, e mantém no ar a comunidade que ajuda quem está começando.</p>
           <a
             class="botao botao--secundario"
             href="https://apoia.se/soujunior"
@@ -498,8 +629,7 @@
 
     <!-- ===================================================================
        RODAPÉ  ·  #footer  ·  Rafaella
-       Logo em versão clara sobre o navy, descrição, três colunas e crédito.
-       Os links de Canais e SouJunior saem do domínio.
+       Logo em versão clara sobre o navy, descrição, duas colunas e crédito.
        =================================================================== -->
     <footer class="secao secao--navy rodape" id="footer">
       <div class="container">
@@ -516,10 +646,10 @@
               <h3>Nesta página</h3>
               <ul>
                 <li><a href="#quem-somos">A SouJunior</a></li>
-                <li><a href="#causa">Para onde vai</a></li>
-                <li><a href="#impacto">Impacto</a></li>
-                <li><a href="#planos">Escolha um valor</a></li>
-                <li><a href="#parceria">Empresas</a></li>
+                <li><a href="#causa">Sua doação</a></li>
+                <li><a href="#impacto">Números</a></li>
+                <li><a href="#planos">Apoiar</a></li>
+                <li><a href="#parceria">Contato</a></li>
               </ul>
             </div>
 
@@ -560,39 +690,6 @@
                     rel="noopener"
                     aria-label="GitHub da SouJunior, abre em nova aba"
                     >GitHub</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="rodape__coluna">
-              <h3>SouJunior</h3>
-              <ul>
-                <li>
-                  <a
-                    href="https://www.soujunior.tech/"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Site da SouJunior, abre em nova aba"
-                    >Sobre</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.soujunior.tech/faq"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="FAQ da SouJunior, abre em nova aba"
-                    >FAQ</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.soujunior.tech/politica-de-privacidade"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Política de privacidade da SouJunior, abre em nova aba"
-                    >Política de privacidade</a
                   >
                 </li>
               </ul>

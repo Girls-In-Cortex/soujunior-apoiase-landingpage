@@ -92,9 +92,9 @@ A página foi estruturada como uma jornada, conduzindo o visitante da causa até
 | `#hero` | Abertura | Responde em 5 segundos por que apoiar, com o CTA principal |
 | `#quem-somos` | O que é a SouJunior | Apresenta a comunidade, as áreas de atuação e as quatro formas de participar |
 | `#causa` | Para onde vai a doação | Prestação de contas: desenvolvimento, hospedagem e manutenção dos projetos |
-| `#impacto` | Impacto | Repositórios mantidos, seguidores nas redes, juniores contratados e voluntários ativos |
-| `#planos` | Escolha um valor | R$ 2, R$ 10 e R$ 25, com destaque no valor de entrada |
-| `#parceria` | Empresas e patrocínio | Formulário de proposta institucional |
+| `#impacto` | Impacto | Membros da comunidade, mentores ativos, pessoas empregadas e apoiadores, com dados fornecidos pela organização |
+| `#planos` | Escolha um valor | R$ 2, R$ 10 e R$ 25, cada valor traduzido em tempo de infraestrutura no ar, com destaque no valor de entrada |
+| `#parceria` | Empresas e patrocínio | Contatos da SouJunior e formulário de proposta institucional, com seleção de tipo de interesse |
 | `#cta` | Fechamento | Último pedido de apoio antes do rodapé |
 | `#footer` | Rodapé | Apoia.se, Discord, WhatsApp, GitHub e licença |
 
@@ -105,6 +105,7 @@ A página foi estruturada como uma jornada, conduzindo o visitante da causa até
 O que a página usa no lugar:
 
 - **Logo da SouJunior**, em SVG, nas duas versões oficiais
+- **Mascotes oficiais da SouJunior**, vindos do UI Kit, sempre como elemento decorativo: entram com `alt` vazio e `aria-hidden`
 - **Formas geométricas autorais** em SVG, criadas para o projeto, sem risco de licença
 
 Isso torna a página mais leve, elimina requisições de imagem e remove qualquer dependência de banco de imagem ou de crédito de terceiro.
@@ -139,12 +140,6 @@ O back-end existe apenas para receber o formulário de parceria. Se ele estiver 
 
 Nenhum conteúdo da página depende de requisição a servidor.
 
-### Números do GitHub buscados no cliente, com fallback
-
-Os dados de repositórios e projetos vêm da API pública do GitHub, consultada pelo navegador de quem visita. Como o limite de requisições é contado por IP de origem, cada pessoa consome do próprio limite e a página não esbarra em teto compartilhado.
-
-Se a requisição falhar, os números já escritos no HTML permanecem visíveis. A seção nunca aparece vazia nem quebrada.
-
 ### Back-end em camadas
 
 O back-end em Java com Spring Boot segue separação por responsabilidade:
@@ -162,8 +157,18 @@ O back-end em Java com Spring Boot segue separação por responsabilidade:
 POST /parceria
 Content-Type: application/json
 
-{ "nome": "", "empresa": "", "email": "", "mensagem": "" }
+{
+  "nome": "",
+  "email": "",
+  "interesse": ["patrocinio"],
+  "empresa": "",
+  "mensagem": ""
+}
 ```
+
+Obrigatórios: `nome`, `email` e `interesse`, que precisa ter pelo menos um item. Opcionais: `empresa` e `mensagem`, que podem chegar vazios ou não chegar.
+
+Valores aceitos em `interesse`: `patrocinio`, `infraestrutura`, `mentoria`, `contratar` e `outra`.
 
 | Status | Corpo | Quando |
 |---|---|---|
@@ -197,7 +202,7 @@ Acessibilidade foi tratada como requisito de design, não como revisão final. A
 
 Todos os pares de cor usados na página foram calculados antes de entrar no design. Nenhum texto fica abaixo de **4.5:1** e nenhum elemento não textual fica abaixo de **3:1**.
 
-O menor valor em uso é **5.28:1**, no texto do botão principal.
+O menor valor em uso é **5.23:1**, no texto secundário sobre o cinza do hero e da causa. O texto do botão principal resulta em **11.22:1**.
 
 A cor de acento âmbar tem uma limitação deliberada: branco sobre ela resulta em 1.83:1. Por isso ela nunca é usada como fundo de botão. A restrição de contraste protege a hierarquia visual por construção, e não por disciplina de quem implementa.
 
@@ -209,6 +214,7 @@ A cor de acento âmbar tem uma limitação deliberada: branco sobre ela resulta 
 - Menu mobile com `aria-expanded`, foco preso enquanto aberto, fechamento por `Esc` e bloqueio da rolagem de fundo
 - Cor nunca é o único meio de comunicar estado: erro de formulário tem borda e mensagem de texto
 - Rótulo de campo sempre visível, nunca substituído por texto de exemplo dentro do campo
+- Grupo de caixas de seleção dentro de `fieldset` com `legend`, para o leitor de tela relacionar as opções à pergunta
 - Toda animação respeita `prefers-reduced-motion`
 - Elementos decorativos marcados com `aria-hidden`
 - Links que saem do domínio sinalizados visualmente e no `aria-label`
@@ -223,24 +229,30 @@ O CI roda Lighthouse e validação de HTML a cada pull request. Cada seção é 
 
 ## Design e Identidade Visual <a id="6-design-e-identidade-visual"></a>
 
-A SouJunior não possui manual de marca publicado. A identidade foi reconstruída a partir do código em produção da organização, e sobre ela foi criada uma camada específica de campanha.
+A SouJunior enviou o UI Kit oficial depois do início do projeto. A identidade da página combina o kit com o que já havia sido extraído do código em produção, e cada divergência está documentada no Figma.
+
+Do kit foram adotadas a tipografia, Funnel Display nos títulos e Funnel Sans no texto, e os mascotes oficiais.
+
+A paleta divergiu por contraste, mas a solução veio de dentro do próprio kit: o azul primário, `#3C7EF9`, resulta em 3.79:1 com texto branco e reprova no mínimo de 4.5:1 exigido para texto de corpo. O botão principal usa então a cor Destaque do kit, `#0E14BF`, que resulta em 11.22:1, e o hover usa a Secundária, `#0A1662`, com 16.10:1.
+
+Os títulos mantêm o navy do código em produção da organização, `#00205F`, com 15.31:1 no branco.
 
 | Página do arquivo | O que traz | Link direto |
 |---|---|---|
-| Identidade Visual | Dois quadros. O primeiro traz a identidade original: procedência de cada valor, cores e tipografia extraídas do repositório oficial da SouJunior, divergências encontradas entre as fontes e o que a marca não possuía. O segundo traz a identidade adaptada: o que foi criado para a campanha e o raciocínio de cada decisão, com todos os contrastes calculados | [Abrir Identidade Visual](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=0-1) |
+| Identidade Visual | Dois quadros. O primeiro traz a identidade original: procedência de cada valor, cores e tipografia extraídas do repositório oficial da SouJunior, divergências encontradas entre as fontes e o que foi adotado do UI Kit oficial. O segundo traz a identidade adaptada: o que foi criado para a campanha e o raciocínio de cada decisão, com todos os contrastes calculados | [Abrir Identidade Visual](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=0-1) |
 | Guia para devs | Tokens, tipografia, espaçamento, componentes e âncoras, em formato de consulta rápida | [Abrir Guia](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=164-2) |
 | Wireframe | Estrutura de blocos em baixa fidelidade, mobile e desktop | [Abrir Wireframe](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=174-2) |
 | Landing Page | Protótipo final em mobile e desktop, mais o estado aberto do menu | [Abrir Protótipo](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=125-2) |
 
 ### O que foi mantido da marca
 
-Logo, paleta de azuis, neutros e a tipografia Radio Canada.
+Logo, paleta de azuis, os mascotes e a tipografia Funnel Display e Funnel Sans, vinda do UI Kit oficial.
 
 ### O que foi criado para a campanha
 
-Cor de acento, escala de espaçamento, raios, espessuras de traço, ritmo de cor entre seções e a anatomia dos componentes.
+Tom específico do âmbar, escala de espaçamento, raios, espessuras de traço, ritmo de cor entre seções e a anatomia dos componentes.
 
-A marca não possuía nenhum desses elementos, e nenhum par de contraste em tema claro havia sido validado antes deste projeto.
+O kit traz um amarelo de destaque, `#FACC15`. A página usa um âmbar mais quente, `#FFB020`, que convive melhor com o navy das seções escuras. Os dois passam em contraste com texto escuro.
 
 <p align="right"><a href="#topo">Voltar ao topo</a></p>
 
@@ -319,7 +331,7 @@ O servidor sobe em `http://localhost:8080`.
 │   ├── index.html
 │   └── assets/
 │       ├── css/          # tokens.css, base.css e um arquivo por seção
-│       ├── js/           # menu, dados do GitHub e formulário
+│       ├── js/           # menu, contador do impacto e formulário
 │       └── img/
 ├── .env.example          # Modelo de variáveis de ambiente
 ├── .gitignore

@@ -14,10 +14,14 @@
      use os tokens semânticos mais abaixo.
      ---------------------------------------------------------------------- */
 
+  /* Vindas do UI Kit oficial da SouJunior */
+  --kit-destaque: #0e14bf;
+  --kit-secundaria: #0a1662;
+  --kit-neutra: #242731;
+  --kit-base: #f4f4f6;
+
   /* Azuis da marca SouJunior */
   --brand-900: #00205f;
-  --brand-600: #0c4987;
-  --brand-500: #046ad0;
   --brand-300: #95c6ff;
 
   /* Âmbar: cor de acento criada para esta campanha */
@@ -25,10 +29,9 @@
   --accent-700: #b25e00;
 
   /* Neutros */
-  --neutral-950: #171123;
   --neutral-600: #666666;
   --neutral-150: #ededed;
-  --neutral-50: #f9f9f9;
+  --neutral-50: #f4f4f6; /* base do UI Kit oficial, mesmo valor de --kit-base */
   --neutral-0: #ffffff;
 
   /* Estados */
@@ -45,12 +48,12 @@
   --color-surface-accent: var(--brand-300); /* fundo de seção azul claro */
 
   --color-heading: var(--brand-900); /* títulos, bordas de 2px e tag */
-  --color-text: var(--neutral-950); /* texto corrido */
+  --color-text: var(--kit-neutra); /* texto corrido. 14.90:1 no branco */
   --color-text-muted: var(--neutral-600); /* legenda e texto de apoio */
   --color-text-on-brand: var(--neutral-0); /* texto sobre navy, azul ou botão */
 
-  --color-action: var(--brand-500); /* fundo do botão principal */
-  --color-action-hover: var(--brand-600); /* botão principal no hover */
+  --color-action: var(--kit-destaque); /* botão principal. 11.22:1 com texto branco */
+  --color-action-hover: var(--kit-secundaria); /* hover do botão. 16.10:1 */
 
   --color-border: var(--brand-900); /* borda de campo de formulário */
   --color-divider: var(--neutral-150); /* régua e divisor */
@@ -64,16 +67,19 @@
   /* Campanha: o âmbar marca valor e decisão.
      Nunca é fundo de botão: branco sobre ele dá 1.83:1 e reprova. */
   --color-highlight: var(--accent-400); /* CTA final, plano destacado e chip */
-  --color-on-highlight: var(--neutral-950); /* texto sobre o âmbar */
+  --color-on-highlight: var(--kit-neutra); /* texto sobre o âmbar. 8.15:1 */
   --color-accent-text: var(--accent-700); /* âmbar em texto pequeno, uso restrito */
 
   /* ----------------------------------------------------------------------
      TIPOGRAFIA
-     Radio Canada, via Google Fonts. Pesos 400, 600 e 700.
+     Funnel Display nos títulos e Funnel Sans no texto, do UI Kit oficial
+     da SouJunior. As duas estão no Google Fonts sob licença SIL Open Font
+     License. Pesos 400, 600 e 700.
      A raiz fica em 16px: nunca troque para 10px.
      ---------------------------------------------------------------------- */
 
-  --font-family: 'Radio Canada', system-ui, -apple-system, sans-serif;
+  --font-display: "Funnel Display", system-ui, sans-serif; /* títulos */
+  --font-family: "Funnel Sans", system-ui, sans-serif; /* texto */
 
   --weight-regular: 400;
   --weight-semibold: 600;
