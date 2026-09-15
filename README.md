@@ -93,8 +93,8 @@ A página foi estruturada como uma jornada, conduzindo o visitante da causa até
 | `#quem-somos` | O que é a SouJunior | Apresenta a comunidade, as áreas de atuação e as quatro formas de participar |
 | `#causa` | Para onde vai a doação | Prestação de contas: desenvolvimento, hospedagem e manutenção dos projetos |
 | `#impacto` | Impacto | Membros da comunidade, mentores ativos, pessoas empregadas e apoiadores, com dados fornecidos pela organização |
-| `#planos` | Escolha um valor | R$ 2, R$ 10 e R$ 25, com destaque no valor de entrada |
-| `#parceria` | Empresas e patrocínio | Formulário de proposta institucional |
+| `#planos` | Escolha um valor | R$ 2, R$ 10 e R$ 25, cada valor traduzido em tempo de infraestrutura no ar, com destaque no valor de entrada |
+| `#parceria` | Empresas e patrocínio | Contatos da SouJunior e formulário de proposta institucional, com seleção de tipo de interesse |
 | `#cta` | Fechamento | Último pedido de apoio antes do rodapé |
 | `#footer` | Rodapé | Apoia.se, Discord, WhatsApp, GitHub e licença |
 
@@ -105,7 +105,7 @@ A página foi estruturada como uma jornada, conduzindo o visitante da causa até
 O que a página usa no lugar:
 
 - **Logo da SouJunior**, em SVG, nas duas versões oficiais
-- **Mascotes oficiais da SouJunior**, vindos do UI Kit
+- **Mascotes oficiais da SouJunior**, vindos do UI Kit, sempre como elemento decorativo: entram com `alt` vazio e `aria-hidden`
 - **Formas geométricas autorais** em SVG, criadas para o projeto, sem risco de licença
 
 Isso torna a página mais leve, elimina requisições de imagem e remove qualquer dependência de banco de imagem ou de crédito de terceiro.
@@ -157,8 +157,18 @@ O back-end em Java com Spring Boot segue separação por responsabilidade:
 POST /parceria
 Content-Type: application/json
 
-{ "nome": "", "empresa": "", "email": "", "mensagem": "" }
+{
+  "nome": "",
+  "email": "",
+  "interesse": ["patrocinio"],
+  "empresa": "",
+  "mensagem": ""
+}
 ```
+
+Obrigatórios: `nome`, `email` e `interesse`, que precisa ter pelo menos um item. Opcionais: `empresa` e `mensagem`, que podem chegar vazios ou não chegar.
+
+Valores aceitos em `interesse`: `patrocinio`, `infraestrutura`, `mentoria`, `contratar` e `outra`.
 
 | Status | Corpo | Quando |
 |---|---|---|
@@ -192,7 +202,7 @@ Acessibilidade foi tratada como requisito de design, não como revisão final. A
 
 Todos os pares de cor usados na página foram calculados antes de entrar no design. Nenhum texto fica abaixo de **4.5:1** e nenhum elemento não textual fica abaixo de **3:1**.
 
-O menor valor em uso é **5.28:1**, no texto do botão principal.
+O menor valor em uso é **5.23:1**, no texto secundário sobre o cinza do hero e da causa. O texto do botão principal resulta em **11.22:1**.
 
 A cor de acento âmbar tem uma limitação deliberada: branco sobre ela resulta em 1.83:1. Por isso ela nunca é usada como fundo de botão. A restrição de contraste protege a hierarquia visual por construção, e não por disciplina de quem implementa.
 
@@ -204,6 +214,7 @@ A cor de acento âmbar tem uma limitação deliberada: branco sobre ela resulta 
 - Menu mobile com `aria-expanded`, foco preso enquanto aberto, fechamento por `Esc` e bloqueio da rolagem de fundo
 - Cor nunca é o único meio de comunicar estado: erro de formulário tem borda e mensagem de texto
 - Rótulo de campo sempre visível, nunca substituído por texto de exemplo dentro do campo
+- Grupo de caixas de seleção dentro de `fieldset` com `legend`, para o leitor de tela relacionar as opções à pergunta
 - Toda animação respeita `prefers-reduced-motion`
 - Elementos decorativos marcados com `aria-hidden`
 - Links que saem do domínio sinalizados visualmente e no `aria-label`
@@ -222,7 +233,9 @@ A SouJunior enviou o UI Kit oficial depois do início do projeto. A identidade d
 
 Do kit foram adotadas a tipografia, Funnel Display nos títulos e Funnel Sans no texto, e os mascotes oficiais.
 
-A paleta divergiu por contraste: o azul primário do kit, `#3C7EF9`, resulta em 3.79:1 com texto branco e reprova no mínimo de 4.5:1 exigido para texto de corpo. A página usa `#046AD0`, o azul mais presente no código em produção da organização, que resulta em 5.28:1.
+A paleta divergiu por contraste, mas a solução veio de dentro do próprio kit: o azul primário, `#3C7EF9`, resulta em 3.79:1 com texto branco e reprova no mínimo de 4.5:1 exigido para texto de corpo. O botão principal usa então a cor Destaque do kit, `#0E14BF`, que resulta em 11.22:1, e o hover usa a Secundária, `#0A1662`, com 16.10:1.
+
+Os títulos mantêm o navy do código em produção da organização, `#00205F`, com 15.31:1 no branco.
 
 | Página do arquivo | O que traz | Link direto |
 |---|---|---|
