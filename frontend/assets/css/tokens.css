@@ -69,11 +69,14 @@
 
   /* ----------------------------------------------------------------------
      TIPOGRAFIA
-     Radio Canada, via Google Fonts. Pesos 400, 600 e 700.
+     Funnel Display nos títulos e Funnel Sans no texto, do UI Kit oficial
+     da SouJunior. As duas estão no Google Fonts sob licença SIL Open Font
+     License. Pesos 400, 600 e 700.
      A raiz fica em 16px: nunca troque para 10px.
      ---------------------------------------------------------------------- */
 
-  --font-family: 'Radio Canada', system-ui, -apple-system, sans-serif;
+  --font-display: "Funnel Display", system-ui, sans-serif; /* títulos */
+  --font-family: "Funnel Sans", system-ui, sans-serif; /* texto */
 
   --weight-regular: 400;
   --weight-semibold: 600;

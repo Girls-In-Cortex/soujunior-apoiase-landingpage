@@ -92,7 +92,7 @@ A página foi estruturada como uma jornada, conduzindo o visitante da causa até
 | `#hero` | Abertura | Responde em 5 segundos por que apoiar, com o CTA principal |
 | `#quem-somos` | O que é a SouJunior | Apresenta a comunidade, as áreas de atuação e as quatro formas de participar |
 | `#causa` | Para onde vai a doação | Prestação de contas: desenvolvimento, hospedagem e manutenção dos projetos |
-| `#impacto` | Impacto | Repositórios mantidos, seguidores nas redes, juniores contratados e voluntários ativos |
+| `#impacto` | Impacto | Membros da comunidade, mentores ativos, pessoas empregadas e apoiadores, com dados fornecidos pela organização |
 | `#planos` | Escolha um valor | R$ 2, R$ 10 e R$ 25, com destaque no valor de entrada |
 | `#parceria` | Empresas e patrocínio | Formulário de proposta institucional |
 | `#cta` | Fechamento | Último pedido de apoio antes do rodapé |
@@ -105,6 +105,7 @@ A página foi estruturada como uma jornada, conduzindo o visitante da causa até
 O que a página usa no lugar:
 
 - **Logo da SouJunior**, em SVG, nas duas versões oficiais
+- **Mascotes oficiais da SouJunior**, vindos do UI Kit
 - **Formas geométricas autorais** em SVG, criadas para o projeto, sem risco de licença
 
 Isso torna a página mais leve, elimina requisições de imagem e remove qualquer dependência de banco de imagem ou de crédito de terceiro.
@@ -138,12 +139,6 @@ O projeto tem nove seções e nove pessoas. Separar o CSS por seção reduz conf
 O back-end existe apenas para receber o formulário de parceria. Se ele estiver indisponível, a página carrega normalmente e apenas o envio do formulário fica fora do ar, com mensagem de erro e canal alternativo de contato.
 
 Nenhum conteúdo da página depende de requisição a servidor.
-
-### Números do GitHub buscados no cliente, com fallback
-
-Os dados de repositórios e projetos vêm da API pública do GitHub, consultada pelo navegador de quem visita. Como o limite de requisições é contado por IP de origem, cada pessoa consome do próprio limite e a página não esbarra em teto compartilhado.
-
-Se a requisição falhar, os números já escritos no HTML permanecem visíveis. A seção nunca aparece vazia nem quebrada.
 
 ### Back-end em camadas
 
@@ -223,24 +218,28 @@ O CI roda Lighthouse e validação de HTML a cada pull request. Cada seção é 
 
 ## Design e Identidade Visual <a id="6-design-e-identidade-visual"></a>
 
-A SouJunior não possui manual de marca publicado. A identidade foi reconstruída a partir do código em produção da organização, e sobre ela foi criada uma camada específica de campanha.
+A SouJunior enviou o UI Kit oficial depois do início do projeto. A identidade da página combina o kit com o que já havia sido extraído do código em produção, e cada divergência está documentada no Figma.
+
+Do kit foram adotadas a tipografia, Funnel Display nos títulos e Funnel Sans no texto, e os mascotes oficiais.
+
+A paleta divergiu por contraste: o azul primário do kit, `#3C7EF9`, resulta em 3.79:1 com texto branco e reprova no mínimo de 4.5:1 exigido para texto de corpo. A página usa `#046AD0`, o azul mais presente no código em produção da organização, que resulta em 5.28:1.
 
 | Página do arquivo | O que traz | Link direto |
 |---|---|---|
-| Identidade Visual | Dois quadros. O primeiro traz a identidade original: procedência de cada valor, cores e tipografia extraídas do repositório oficial da SouJunior, divergências encontradas entre as fontes e o que a marca não possuía. O segundo traz a identidade adaptada: o que foi criado para a campanha e o raciocínio de cada decisão, com todos os contrastes calculados | [Abrir Identidade Visual](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=0-1) |
+| Identidade Visual | Dois quadros. O primeiro traz a identidade original: procedência de cada valor, cores e tipografia extraídas do repositório oficial da SouJunior, divergências encontradas entre as fontes e o que foi adotado do UI Kit oficial. O segundo traz a identidade adaptada: o que foi criado para a campanha e o raciocínio de cada decisão, com todos os contrastes calculados | [Abrir Identidade Visual](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=0-1) |
 | Guia para devs | Tokens, tipografia, espaçamento, componentes e âncoras, em formato de consulta rápida | [Abrir Guia](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=164-2) |
 | Wireframe | Estrutura de blocos em baixa fidelidade, mobile e desktop | [Abrir Wireframe](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=174-2) |
 | Landing Page | Protótipo final em mobile e desktop, mais o estado aberto do menu | [Abrir Protótipo](https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior?node-id=125-2) |
 
 ### O que foi mantido da marca
 
-Logo, paleta de azuis, neutros e a tipografia Radio Canada.
+Logo, paleta de azuis, os mascotes e a tipografia Funnel Display e Funnel Sans, vinda do UI Kit oficial.
 
 ### O que foi criado para a campanha
 
-Cor de acento, escala de espaçamento, raios, espessuras de traço, ritmo de cor entre seções e a anatomia dos componentes.
+Tom específico do âmbar, escala de espaçamento, raios, espessuras de traço, ritmo de cor entre seções e a anatomia dos componentes.
 
-A marca não possuía nenhum desses elementos, e nenhum par de contraste em tema claro havia sido validado antes deste projeto.
+O kit traz um amarelo de destaque, `#FACC15`. A página usa um âmbar mais quente, `#FFB020`, que convive melhor com o navy das seções escuras. Os dois passam em contraste com texto escuro.
 
 <p align="right"><a href="#topo">Voltar ao topo</a></p>
 
@@ -319,7 +318,7 @@ O servidor sobe em `http://localhost:8080`.
 │   ├── index.html
 │   └── assets/
 │       ├── css/          # tokens.css, base.css e um arquivo por seção
-│       ├── js/           # menu, dados do GitHub e formulário
+│       ├── js/           # menu, contador do impacto e formulário
 │       └── img/
 ├── .env.example          # Modelo de variáveis de ambiente
 ├── .gitignore
