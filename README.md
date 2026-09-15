@@ -390,32 +390,33 @@ Front-end e back-end são publicados em serviços separados. O back-end libera C
         <a href="https://github.com/JustBruder"><img src="https://github.com/JustBruder.png" width="70px" style="border-radius: 50%;" alt="Ingrid Bruder"/><br><sub><b>Ingrid Bruder</b></sub><br><sub>Back-end</sub><br><sub>Segurança</sub></a><br><a href="https://www.linkedin.com/in/ingrid-bruder"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
-        <a href="https://github.com/alananjos06"><img src="https://github.com/alananjos06.png" width="70px" style="border-radius: 50%;" alt="Alana Anjos"/><br><sub><b>Alana Anjos</b></sub><br><sub>Front-end</sub></a><br><a href="https://linkedin.com/in/alana-anjos-aga222"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/SamaraAlanna"><img src="https://github.com/SamaraAlanna.png" width="70px" style="border-radius: 50%;" alt="Samara Alanna"/><br><sub><b>Samara Alanna</b></sub><br><sub>UX/UI</sub><br><sub>Design System</sub></a><br><a href="https://www.linkedin.com/in/samaraalanna/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
-    </tr>
+      </tr>
     <tr>
       <td align="center" width="120px">
-        <a href="https://github.com/SamaraAlanna"><img src="https://github.com/SamaraAlanna.png" width="70px" style="border-radius: 50%;" alt="Samara Alanna"/><br><sub><b>Samara Alanna</b></sub><br><sub>UX/UI</sub><br><sub>Design System</sub></a><br><a href="https://www.linkedin.com/in/samaraalanna/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/alananjos06"><img src="https://github.com/alananjos06.png" width="70px" style="border-radius: 50%;" alt="Alana Anjos"/><br><sub><b>Alana Anjos</b></sub><br><sub>Front-end</sub></a><br><a href="https://linkedin.com/in/alana-anjos-aga222"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
         <a href="https://github.com/mariasoaresv"><img src="https://github.com/mariasoaresv.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Maria Soares</b></sub><br><sub>Front-end</sub></a><br><a href="https://linkedin.com/in/maria-fernanda-soares-silva"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
-        <a href="https://github.com/USUARIO"><img src="https://github.com/USUARIO.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Nome</b></sub><br><sub>Função</sub></a><br><a href="https://linkedin.com/in/LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a 
+href="https://github.com/Gasparini-11"><img src="https://github.com/gasparini-11.png" width="70px" style="border-radius: 50%;" alt="Rafaella Gasparini"/><br><sub><b>Rafaella Gasparini</b></sub><br><sub>Front-End</sub></a><br><a href="https://www.linkedin.com/in/rafaella-de-jesus-gasparini"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
-    </tr>
+      </tr>
     <tr>
-      <td align="center" width="120px">
-        <a href="https://github.com/Gasparini-11"><img src="https://github.com/gasparini-11.png" width="70px" style="border-radius: 50%;" alt="Rafaella Gasparini"/><br><sub><b>Rafaella Gasparini</b></sub><br><sub>Front-End</sub></a><br><a href="https://www.linkedin.com/in/rafaella-de-jesus-gasparini"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
-      </td>
       <td align="center" width="120px">
         <a href="https://github.com/kamathias89"><img src="https://github.com/kamathias89.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Karina Mathias</b></sub><br><sub>QA</sub></a><br><a href="https://www.linkedin.com/in/kamathias/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
-        <td align="center" width="120px">
-  <a href="https://github.com/paulahcarvalho"><img src="https://github.com/paulahcarvalho.png" width="70px" style="border-radius: 50%;" alt="Paula Carvalho"/><br><sub><b>Paula Carvalho</b></sub><br><sub>PO/PM Júnior</sub></a><br><a href="https://linkedin.com/in/paula-carvalho-390147108/"><img src="https://shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/paulahcarvalho"><img src="https://github.com/paulahcarvalho.png" width="70px" style="border-radius: 50%;" alt="Paula Carvalho"/><br><sub><b>Paula Carvalho</b></sub><br><sub>PO/PM Júnior</sub></a><br><a href="https://linkedin.com/in/paula-carvalho-390147108/"><img src="https://shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+</a>
+  </td>
+      <td align="center" width="120px">
+        <a href="https://github.com/eucarolsevero"><img src="https://github.com/eucarolsevero.png" width="70px" style="border-radius: 50%;" alt="Carol Severl"/><br><sub><b>Carol Severo</b></sub><br><sub>Mentora</sub></a><br><a href="https://www.linkedin.com/in/eucarolsevero"><img src="https://shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
 </td>
-        <a href="https://github.com/eucarolsevero"><img src="https://github.com/eucarolsevero.png" width="70px" style="border-radius: 50%;" alt="Carol Severo"/><br><sub><b>Carol Severo</b></sub><br><sub>Mentora</sub></a><br><a href="https://www.linkedin.com/in/eucarolsevero"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+    </tr>
       </td>
     </tr>
   </table>
