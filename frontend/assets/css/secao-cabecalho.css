@@ -5,3 +5,179 @@
    CSS desta seção e de mais nenhuma. Use sempre os tokens do tokens.css,
    nunca valor solto.
    ========================================================================== */
+
+.cabecalho {
+   position: sticky;
+   top: 0;
+   width: 100%;
+   height: var(--altura-cabecalho);
+   background-color: var(--color-bg);
+   border: var(--stroke-2) solid var(--color-heading);
+}
+
+.cabecalho__nav {
+   display: none;
+}
+
+.cabecalho__interno {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 100%;
+}
+
+.cabecalho__logo img {
+   height: calc(var(--space-8) + 5px);
+   width: auto;
+   display: block;
+}
+
+.cabecalho__menu {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: var(--control-height);
+   height: var(--control-height);
+   padding: calc(var(--space-3) + 2px) var(--space-3);
+   background: transparent;
+   border: var(--stroke-2) solid var(--color-heading);
+   border-radius: var(--radius);
+   cursor: pointer;
+}
+
+.cabecalho__barra {
+   width: 100%;
+   height: var(--stroke-2);
+   background-color: var(--color-heading);
+   border-radius: var(--radius);
+}
+
+/* ==========================================================================
+   MENU MOBILE
+   ========================================================================== */
+
+.menu-mobile[hidden] .menu-mobile__fechar {
+   display: none;
+}
+
+body.menu-aberto .cabecalho__menu {
+   display: none;
+}
+
+.menu-mobile {
+   position: fixed;
+   top: var(--altura-cabecalho);
+   left: 0;
+   width: 100%;
+   height: calc(100vh - var(--altura-cabecalho));
+   background-color: var(--color-bg);
+   z-index: 100;
+   overflow-y: auto;
+   padding: var(--space-4) var(--gutter);
+}
+
+.menu-mobile__fechar {
+   position: fixed;
+   top: calc((var(--altura-cabecalho) - var(--control-height)) / 2);
+   right: calc(var(--space-4) + 2px);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: var(--control-height);
+   height: var(--control-height);
+   background: transparent;
+   border: var(--stroke-2) solid var(--color-heading);
+   border-radius: var(--radius);
+   cursor: pointer;
+   z-index: 101;
+}
+
+.menu-mobile__fechar::before {
+   content: "✕";
+   font-size: var(--fs-h3);
+   color: var(--color-heading);
+   line-height: 1;
+}
+
+.menu-mobile__lista {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-4);
+   list-style: none;
+   padding: 0;
+   margin-top: var(--space-4);
+   margin-bottom: var(--space-6);
+}
+
+.menu-mobile__lista a {
+   font-family: var(--font-family);
+   font-size: var(--fs-lead);
+   font-weight: var(--weight-semibold);
+   color: var(--color-heading);
+   text-decoration: none;
+}
+
+.menu-mobile__lista li {
+   border-bottom: var(--stroke-1) solid var(--color-divider);
+   padding: var(--space-3) 0;
+}
+
+.menu-mobile .botao {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   max-width: 320px;
+   margin: var(--space-4) auto 0 auto;
+   text-align: center;
+}
+
+/* ==========================================================================
+   TELAS MAIORES
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+
+   .cabecalho__menu,
+   .menu-mobile {
+      display: none !important;
+   }
+
+   .cabecalho__logo img {
+      display: none;
+   }
+
+   /* Aplica o logo de desktop como background */
+   .cabecalho__logo {
+      display: block;
+      width: 160px;
+      height: var(--space-8);
+      background-image: url("/frontend/assets/img/logo-color.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left center;
+   }
+
+   .cabecalho__nav {
+      display: flex;
+      align-items: center;
+      gap: var(--space-6);
+   }
+
+   .cabecalho__lista {
+      display: flex;
+      align-items: center;
+      gap: var(--space-6);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+   }
+
+   .cabecalho__lista a {
+      font-family: var(--font-family);
+      font-size: var(--fs-body);
+      font-weight: var(--weight-medium);
+      color: var(--color-heading);
+      text-decoration: none;
+   }
+}
