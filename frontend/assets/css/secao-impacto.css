@@ -5,3 +5,54 @@
    CSS desta seção e de mais nenhuma. Use sempre os tokens do tokens.css,
    nunca valor solto.
    ========================================================================== */
+
+.impacto__numeros {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-block-start: var(--space-8);
+}
+
+.impacto__dado {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--space-2);
+}
+
+.impacto__dado dt {
+  font-size: var(--fs-body);
+  color: var(--color-link-on-dark);
+}
+
+.impacto__valor {
+  font-size: var(--fs-h2);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+}
+
+/* filete âmbar decorativo, nunca como elemento no HTML */
+.impacto__valor::before {
+  content: '';
+  display: block;
+  width: var(--space-8);
+  height: var(--space-1);
+  margin-block-end: var(--space-3);
+  background-color: var(--color-highlight);
+}
+
+@media (min-width: 64rem) {
+  .impacto__numeros {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .impacto__dado {
+    flex: 1;
+  }
+
+  /* régua fina separando os números, exceto o primeiro */
+  .impacto__dado:not(:first-child) {
+    border-inline-start: var(--stroke-1) solid var(--color-divider);
+    padding-inline-start: var(--space-8);
+  }
+}

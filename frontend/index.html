@@ -519,7 +519,9 @@
                 name="nome"
                 placeholder="Como podemos te chamar"
                 required
+                aria-describedby="erro-nome"
               />
+                <p class="campo__erro" id="erro-nome" hidden></p>
             </div>
 
             <div class="campo">
@@ -530,7 +532,9 @@
                 name="email"
                 placeholder="nome@empresa.com.br"
                 required
+                aria-describedby="erro-email"
               />
+              <p class="campo__erro" id="erro-email" hidden></p>
             </div>
 
             <!-- Grupo de caixas: precisa de fieldset e legend, senão o leitor de
@@ -580,6 +584,7 @@
                   <label for="interesse-outra">Outra parceria</label>
                 </li>
               </ul>
+              <p class="campo__erro" id="erro-interesse" hidden></p>
             </fieldset>
 
             <div class="campo">
