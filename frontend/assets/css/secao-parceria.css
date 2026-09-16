@@ -5,3 +5,144 @@
    CSS desta seção e de mais nenhuma. Use sempre os tokens do tokens.css,
    nunca valor solto.
    ========================================================================== */
+
+.parceria__interno {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.parceria__contatos {
+  margin-block-start: var(--space-8);
+}
+
+.parceria__lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-block-start: var(--space-4);
+}
+
+.parceria__lista > div {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.parceria__lista dt {
+  font-weight: var(--weight-semibold);
+  min-width: 90px;
+}
+
+.parceria__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.campo label {
+  font-weight: var(--weight-semibold);
+  font-size: var(--fs-caption);
+}
+
+.campo input,
+.campo textarea {
+  font-family: inherit;
+  font-size: var(--fs-body);
+  min-height: var(--control-height);
+  padding: var(--space-3) var(--space-4);
+  border: var(--stroke-2) solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.campo textarea {
+  min-height: calc(var(--control-height) * 2);
+  resize: vertical;
+}
+
+/* grupo de checkbox: sem borda de campo normal, usa fieldset */
+.campo--grupo {
+  border: none;
+  padding: 0;
+}
+
+.campo--grupo legend {
+  font-weight: var(--weight-semibold);
+  font-size: var(--fs-caption);
+  padding: 0;
+}
+
+.campo__ajuda {
+  font-size: var(--fs-caption);
+  color: var(--color-text-muted);
+  max-width: none;
+}
+
+.parceria__opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-block-start: var(--space-2);
+}
+
+.parceria__opcoes li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* checkbox precisa do alvo de toque mínimo de 44px, mesmo sendo pequeno visualmente */
+.parceria__opcoes input[type='checkbox'] {
+  width: var(--space-6);
+  height: var(--space-6);
+  accent-color: var(--color-action);
+}
+
+/* estado de erro: campo normal e o fieldset de interesse */
+.campo--invalido input,
+.campo--invalido textarea {
+  border-color: var(--color-danger);
+}
+
+fieldset.campo--invalido {
+  outline: var(--stroke-2) solid var(--color-danger);
+  outline-offset: var(--space-2);
+}
+
+.campo__erro {
+  font-size: var(--fs-caption);
+  color: var(--color-danger);
+}
+
+.parceria__nota {
+  font-size: var(--fs-caption);
+  color: var(--color-text-muted);
+}
+
+.parceria__retorno:not(:empty) {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  font-weight: var(--weight-semibold);
+}
+
+@media (min-width: 64rem) {
+  .parceria__interno {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-16);
+  }
+
+  .parceria__texto,
+  .parceria__form {
+    flex: 1;
+  }
+}
