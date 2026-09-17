@@ -72,11 +72,39 @@ O argumento central é que **apoiar é uma das quatro formas oficiais de fazer p
 
 ## Demonstração <a id="2-demonstracao"></a>
 
-**Link da página:** _a definir_
+**Link da página:** https://soujunior-apoiase-landingpage.vercel.app/
 
 **Vídeo de apresentação:** _a definir_
 
 <!-- Inserir aqui o GIF ou capturas de tela do mobile e do desktop -->
+<img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/0034701a-0d49-4f23-8095-7c9117626349" />
+<img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/010473c2-4be5-43ca-9566-56daed0357a8" />
+<img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/337008ca-8c90-40de-b744-7b1a3316c708" />
+<img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/6ca198d3-8e0c-470e-acd5-fd33f3cf21a2" />
+<img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/5251c6fc-df69-4fe8-8f6a-3489e97126cc" />
+<img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/15b0eb14-22ec-439a-857f-f82702bd2c5c" />
+<table>
+  <tr>
+    <td align="center">
+      <<img width="1217" height="2404" alt="Screenshot_2026-09-17-17-27-21-478_com android chrome" src="https://github.com/user-attachments/assets/cbc47965-a444-4b71-833c-7f473c3e31c1" />
+      <sub><b>Apoia-se</b></sub>
+    </td>
+    <td align="center">
+      <img width="1214" height="2313" alt="Screenshot_2026-09-17-17-28-06-662_com android chrome" src="https://github.com/user-attachments/assets/4891672f-d1a4-495f-8f61-e688f8475e4c" />
+      <sub><b>Planos</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="1214" height="2220" alt="Screenshot_2026-09-17-17-27-54-566_com android chrome" src="https://github.com/user-attachments/assets/7d796c4e-db6c-4e75-a409-878898077f60" />
+      <sub><b>Métricas</b></sub>
+    </td>
+    <td align="center">
+      <img width="1207" height="2099" alt="Screenshot_2026-09-17-17-28-18-466_com android chrome" src="https://github.com/user-attachments/assets/6e418fae-6889-44bd-8166-13fec608dc8d" />
+      <sub><b>Contato</b></sub>
+    </td>
+  </tr>
+</table>
 
 <p align="right"><a href="#topo">Voltar ao topo</a></p>
 
@@ -381,8 +409,8 @@ style: ajusta espaçamento do cabeçalho
 
 | Camada | Onde | Status |
 |---|---|---|
-| Front-end | _a definir_ | _a definir_ |
-| Back-end | _a definir_ | _a definir_ |
+| Front-end | vercel | em funcionamento |
+| Back-end | render | em fundionamento |
 
 Front-end e back-end são publicados em serviços separados. O back-end libera CORS apenas para a origem do front-end, e ambos rodam sob HTTPS.
 
@@ -426,7 +454,7 @@ href="https://github.com/Gasparini-11"><img src="https://github.com/gasparini-11
 </a>
   </td>
       <td align="center" width="120px">
-        <a href="https://github.com/eucarolsevero"><img src="https://github.com/eucarolsevero.png" width="70px" style="border-radius: 50%;" alt="Carol Severl"/><br><sub><b>Carol Severo</b></sub><br><sub>Mentora</sub></a><br><a href="https://www.linkedin.com/in/eucarolsevero"><img src="https://shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/eucarolsevero"><img src="https://github.com/eucarolsevero.png" width="70px" style="border-radius: 50%;" alt="Carol Severo"/><br><sub><b>Carol Severo</b></sub><br><sub>Mentora</sub></a><br><a href="https://www.linkedin.com/in/eucarolsevero"><img src="https://shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
 </td>
     </tr>
       </td>
