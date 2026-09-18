@@ -5,3 +5,117 @@
    CSS desta seção e de mais nenhuma. Use sempre os tokens do tokens.css,
    nunca valor solto.
    ========================================================================== */
+
+.hero {
+   /* Zera o padding de baixo da secao para o mascote encostar no fim */
+   padding-bottom: 0;
+}
+
+.hero__interno {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   padding: var(--space-8) var(--gutter);
+}
+
+/* Oculta o mascote e botao secundario no mobile*/
+.hero__mascote {
+   display: none;
+}
+
+.hero__secundario {
+   display: none;
+}
+
+.hero__acoes {
+   display: flex;
+   justify-content: center;
+   gap: var(--space-4);
+   width: 100%;
+   margin-top: var(--space-6);
+}
+
+.hero__acoes .botao--principal {
+   width: 100%;
+   max-width: calc(var(--space-32) * 2.5);
+   text-align: center;
+}
+
+.hero__texto {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
+
+.hero__texto h1 {
+   font-family: var(--font-display);
+   font-size: var(--fs-h2);
+   font-weight: var(--weight-bold);
+   color: var(--color-heading);
+   line-height: var(--leading-tight);
+}
+
+.hero__apoio {
+   font-family: var(--font-family);
+   font-size: var(--fs-lead);
+   color: var(--color-text);
+   margin-top: var(--space-4);
+}
+
+/* ==========================================================================
+   TELAS MAIORES
+   ========================================================================== */
+
+@media (min-width: 64rem) {
+   .hero__interno {
+      max-height: none;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      gap: var(--space-8);
+
+      /* Zera o padding para o mascote encostar no fim */
+      padding-top: var(--space-8);
+      padding-bottom: 0;
+   }
+
+   .hero__texto {
+      max-width: var(--measure);
+      align-items: flex-start;
+      align-self: center;
+      padding-bottom: var(--space-8);
+   }
+
+   .hero__texto h1 {
+      font-size: var(--fs-h1);
+   }
+
+   .hero__acoes {
+      justify-content: flex-start;
+   }
+
+   .hero__acoes .botao--principal {
+      width: auto;
+      max-width: none;
+   }
+
+   .hero__mascote {
+      display: block;
+      max-width: calc(var(--space-32) * 4);
+      width: 100%;
+      height: auto;
+      align-self: flex-end;
+      margin-bottom: 0;
+      display: block;
+   }
+
+   .hero__secundario {
+      display: inline-flex;
+   }
+}

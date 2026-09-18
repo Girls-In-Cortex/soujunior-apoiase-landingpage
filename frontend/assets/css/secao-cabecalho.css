@@ -149,7 +149,7 @@ body.menu-aberto .cabecalho__barra:nth-child(3) {
    TELAS MAIORES
    ========================================================================== */
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
 
    .cabecalho__menu,
    .menu-mobile {

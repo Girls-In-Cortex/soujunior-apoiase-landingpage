@@ -5,3 +5,36 @@
    CSS desta seção e de mais nenhuma. Use sempre os tokens do tokens.css,
    nunca valor solto.
    ========================================================================== */
+
+.cta-final__interno {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   width: 100%;
+   max-width: var(--content-width);
+
+}
+
+.cta-final h2 {
+   font-family: var(--font-display);
+   font-size: var(--fs-h2);
+   font-weight: var(--weight-bold);
+   color: var(--color-on-highlight);
+   line-height: var(--leading-tight);
+   max-width: var(--measure);
+}
+
+.cta-final p {
+   font-family: var(--font-family);
+   font-size: var(--fs-lead);
+   color: var(--color-on-highlight);
+   line-height: var(--leading-relaxed);
+   margin-top: var(--space-4);
+   max-width: calc(var(--measure) * 2);
+}
+
+.cta-final .botao {
+   margin-top: var(--space-8);
+   text-align: center;
+}
