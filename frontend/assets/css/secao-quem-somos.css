@@ -5,3 +5,76 @@
    CSS desta seção e de mais nenhuma. Use sempre os tokens do tokens.css,
    nunca valor solto.
    ========================================================================== */
+   .quem-somos .titulo-secao {
+      margin-bottom: var(--space-8);
+   }
+
+   .quem-somos .titulo-secao p{
+      max-width: none;
+   }
+
+   .quem-somos__papeis {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+      margin-top: var(--space-8);
+      font-size: var(--fs-caption);
+   }
+
+   .quem-somos__papeis + h3 {
+      margin-top: var(--space-8);
+   }
+
+   .quem-somos__papel {
+      padding: var(--space-6);
+      background-color: var(--color-bg);
+      border: var(--stroke-2) solid var(--color-border);
+      border-radius: var(--radius);
+      min-height: calc(var(--space-24) + var(--space-16));
+   }
+   
+   .quem-somos__papel--destaque{
+      box-shadow: var(--shadow);
+      background-color: var(--color-highlight);
+   }
+
+   .quem-somos__papel--destaque .tag {
+      display: inline-block;
+      padding: var(--space-1) var(--space-2);
+      margin-bottom: var(--space-4);
+      background-color: var(--color-heading);
+      color: var(--color-text-on-brand);
+      border-radius: var(--radius);
+      font-size: var(--fs-caption);
+      font-weight: var(--weight-regular);
+   }
+   
+   .quem-somos__areas{
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-top: var(--space-4);
+   }
+
+   .quem-somos__areas li:nth-child(9){
+      background-color: var(--color-highlight);
+      color: var(--color-on-highlight);
+   }
+
+   .quem-somos__areas li {
+
+    padding: var(--space-2) var(--space-3);
+    border: var(--stroke-2) solid var(--color-border);
+    border-radius: var(--radius-pill);
+    color: var(--color-heading);
+    font-size: var(--fs-caption);
+
+   }
+
+   @media(min-width: 64rem){
+      .quem-somos__papeis{
+         grid-template-columns: repeat(4, 1fr);
+         align-items: stretch;
+      }
+   }
+
