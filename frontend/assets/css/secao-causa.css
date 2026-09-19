@@ -5,3 +5,82 @@
    CSS desta seção e de mais nenhuma. Use sempre os tokens do tokens.css,
    nunca valor solto.
    ========================================================================== */
+.causa .titulo-secao{
+   display: grid;
+   gap: var(--space-4);
+   margin-bottom: var(--space-12);
+}
+
+.causa .titulo-secao p{
+      max-width: none;
+      color: var(--color-text-muted);
+}
+
+.causa__colunas{
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: var(--space-4);
+}
+
+.causa__cartao h3{
+   margin-bottom: var(--space-6);
+}
+
+.causa__cartao--azul{
+   background-color: var(--color-highlight);
+}
+
+.causa__itens{
+   display: grid;
+   gap: var(--space-6);
+}
+
+.causa__itens li{
+   display: grid;
+   grid-template-columns: auto 1fr;
+   gap: var(--space-4);
+   align-items: start;
+}
+
+.causa__itens h4{
+   margin-bottom: var(--space-1);
+   font-size: var(--fs-body);
+   color: var(--color-text);
+}
+
+.causa__itens p{
+   color: var(--color-text-muted)
+}
+
+.causa__cartao--azul .causa__itens p{
+   font-size: var(--fs-caption);
+   color: var(--color-on-highlight);
+}
+
+.causa__marcador{
+   display: grid;
+  place-items: center;
+  width: var(--space-8);
+  height: var(--space-8);
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-semibold);
+  line-height: 1;
+  color: var(--color-text-on-brand);
+  background-color: var(--color-heading);
+  border-radius: var(--radius);
+}
+
+.causa__valor{
+   min-width: var(--space-16);
+   font-family: var(--font-display);
+   font-size: var(--fs-h3);
+   font-weight: var(--weight-bold);
+   line-height: var(--leading-snug);
+   color: var(--color-heading);
+}
+@media (min-width: 64rem) {
+  .causa__colunas {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+   }
+}

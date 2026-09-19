@@ -5,3 +5,68 @@
    CSS desta seção e de mais nenhuma. Use sempre os tokens do tokens.css,
    nunca valor solto.
    ========================================================================== */
+.rodape a:focus-visible{
+   outline-color: var(--color-link-on-dark);
+}
+
+.rodape__topo{
+   display: grid;
+   gap: var(--space-12);
+}
+
+.rodape__logo{
+   display: block;
+}
+
+.rodape__logo img,
+.rodape__logo svg {
+  width: auto;
+  height: var(--space-8);
+}
+
+.rodape__colunas{
+   display: grid;
+   grid-template-columns: repeat(2, auto);
+   justify-content: start;
+   gap: var(--space-8)
+}
+
+.rodape__coluna h3 {
+   margin-bottom: var(--space-2);
+   font-family: var(--font-family);
+   font-size: var(--fs-body);
+   line-height: var(--leading-loose);
+}
+
+.rodape__coluna a {
+   display: inline-block;
+   padding-block: var(--space-2);
+   text-decoration: none;
+}
+
+.rodape__coluna a:hover{
+   color: var(--color-link-on-brand);
+   text-decoration: underline;
+}
+
+.rodape__base {
+   margin-top: var(--space-8);
+   font-size: var(--fs-caption);
+   line-height: var(--leading-relaxed);
+}
+
+@media (min-width: 64rem) {
+  .rodape__topo {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+ 
+  .rodape__colunas {
+    gap: var(--space-16);
+  }
+}
+
+.rodape__marca p {
+  margin-top: var(--space-4);
+  max-width: 32ch;
+}
