@@ -5,3 +5,69 @@
    CSS desta seção e de mais nenhuma. Use sempre os tokens do tokens.css,
    nunca valor solto.
    ========================================================================== */
+.planos .titulo-secao {
+   display: grid;
+   gap: var(--space-4);
+   margin-bottom: var(--space-12);
+}
+
+.planos .titulo-secao p {
+   color: var(--color-text-muted);
+   max-width: none;
+}
+
+.planos__lista {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: var(--space-8);
+}
+
+.plano{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: var(--space-8);
+}
+
+.plano__conteudo {
+   display: grid;
+   gap: var(--space-4);
+   justify-items: start;
+}
+
+.plano__valor{
+   font-size: var(--fs-h2);
+   line-height: var(--landing-tight);
+}
+
+.plano .botao {
+   width: 100%;
+}
+
+.plano .tag {
+
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--fs-caption);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-on-brand);
+  background-color: var(--color-heading);
+  border-radius: var(--radius);
+
+}
+
+.plano--destaque{
+   background-color: var(--color-highlight);
+   box-shadow: var(--shadow);
+}
+
+.plano--destaque .plano__valor .plano--destaque p {
+   color: var(--color-on-highlight);
+}
+
+@media (min-width: 64rem) {
+  .planos__lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
