@@ -410,7 +410,8 @@ style: ajusta espaçamento do cabeçalho
 | Camada | Onde | Status |
 |---|---|---|
 | Front-end | vercel | em funcionamento |
-| Back-end | render | em fundionamento |
+| Back-end | render | em funcionamento |
+| Tempo de resposta | 5 seg |
 
 Front-end e back-end são publicados em serviços separados. O back-end libera CORS apenas para a origem do front-end, e ambos rodam sob HTTPS.
 
@@ -427,7 +428,7 @@ Front-end e back-end são publicados em serviços separados. O back-end libera C
         <a href="https://github.com/BiaPena-br"><img src="https://github.com/BiaPena-br.png" width="70px" style="border-radius: 50%;" alt="Bianca Pena"/><br><sub><b>Bianca Pena</b></sub><br><sub>Back-end</sub><br><sub>Infra e DevOps</sub></a><br><a href="https://www.linkedin.com/in/bianca-penna/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
-        <a href="https://github.com/JustBruder"><img src="https://github.com/JustBruder.png" width="70px" style="border-radius: 50%;" alt="Ingrid Bruder"/><br><sub><b>Ingrid Bruder</b></sub><br><sub>Back-end</sub><br><sub>Segurança</sub></a><br><a href="https://www.linkedin.com/in/ingrid-bruder"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/JustBruder"><img src="https://github.com/JustBruder.png" width="70px" style="border-radius: 50%;" alt="Ingrid Bruder"/><br><sub><b>Ingrid Bruder</b></sub><br><sub>Back-end</sub><br><sub>Segurança e Hospedagem</sub></a><br><a href="https://www.linkedin.com/in/ingrid-bruder"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
         <a href="https://github.com/SamaraAlanna"><img src="https://github.com/SamaraAlanna.png" width="70px" style="border-radius: 50%;" alt="Samara Alanna"/><br><sub><b>Samara Alanna</b></sub><br><sub>UX/UI</sub><br><sub>Design System</sub></a><br><a href="https://www.linkedin.com/in/samaraalanna/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
@@ -454,7 +455,7 @@ href="https://github.com/Gasparini-11"><img src="https://github.com/gasparini-11
 </a>
   </td>
       <td align="center" width="120px">
-        <a href="https://github.com/eucarolsevero"><img src="https://github.com/eucarolsevero.png" width="70px" style="border-radius: 50%;" alt="Carol Severo"/><br><sub><b>Carol Severo</b></sub><br><sub>Mentora</sub></a><br><a href="https://www.linkedin.com/in/eucarolsevero"><img src="https://shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/carolseveroo"><img src="https://github.com/carolseveroo.png" width="70px" style="border-radius: 50%;" alt="Carol Severo"/><br><sub><b>Carol Severo</b></sub><br><sub>Mentora</sub></a><br><a href="https://www.linkedin.com/in/eucarolsevero"><img src="https://shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
 </td>
     </tr>
       </td>
