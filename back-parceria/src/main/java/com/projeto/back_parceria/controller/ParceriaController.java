@@ -13,7 +13,10 @@ import java.util.Map;
 @RestController
 @RequestMapping("/parceria")
 // ATENÇÃO PARA PUBLICAÇÃO: Substituir "*" pelo endereço oficial do front-end para segurança de CORS
-@CrossOrigin(origins = "*") 
+@CrossOrigin(origins = {
+    "https://soujunior-apoiase-landingpage.vercel.app/",
+    "http://localhost:3000"
+})
 public class ParceriaController {
 
     @Autowired
