@@ -2,6 +2,7 @@ package com.projeto.back_parceria.service;
 
 import com.projeto.back_parceria.dto.ParceriaRequestDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,12 @@ public class EmailService {
 
     @Autowired(required = false)
     private JavaMailSender mailSender;
+
+    @Value("${spring.mail.username}")
+    private String remetenteEmail;
+
+    @Value("${app.email.destino}")
+    private String emailDestino;
 
     public void processarEnviarParceria(ParceriaRequestDTO dto) {
         // Valida se os valores de interesse enviados são permitidos pelo contrato
@@ -24,15 +31,18 @@ public class EmailService {
         try {
             if (mailSender != null) {
                 SimpleMailMessage message = new SimpleMailMessage();
-                message.setTo("destino@projeto.com");
+                message.setFrom(remetenteEmail);
+                message.setTo(emailDestino);
                 message.setSubject("Nova Proposta de Parceria: " + nomeSanitizado);
                 message.setText("Nome: " + nomeSanitizado + "\n" +
                                 "E-mail: " + dto.getEmail() + "\n" +
                                 "Empresa: " + (empresaSanitizada != null ? empresaSanitizada : "Não informada") + "\n" +
                                 "Interesses: " + interessesFormatados + "\n\n" +
                                 "Mensagem:\n" + (mensagemSanitizada != null ? mensagemSanitizada : "Nenhuma mensagem enviada"));
+
+                mailSender.send(message);
                 
-                System.out.println("E-mail simulado com sucesso para: " + nomeSanitizado);
+                System.out.println("E-mail enviado com sucesso para: " + nomeSanitizado);
             }
         } catch (Exception e) {
             System.out.println("Aviso no envio de e-mail: " + e.getMessage());
