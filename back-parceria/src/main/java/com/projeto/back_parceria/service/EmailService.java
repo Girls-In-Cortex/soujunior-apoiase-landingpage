@@ -13,14 +13,15 @@ public class EmailService {
     @Autowired(required = false)
     private JavaMailSender mailSender;
 
-    @Value("${spring.mail.username}")
+    // Adicionado fallback com o e-mail oficial caso a propriedade não seja resolvida
+    @Value("${spring.mail.username:soujunior.parcerias@gmail.com}")
     private String remetenteEmail;
 
-    @Value("${app.email.destino}")
+    // Adicionado fallback com o e-mail oficial
+    @Value("${app.email.destino:soujunior.parcerias@gmail.com}")
     private String emailDestino;
 
     public void processarEnviarParceria(ParceriaRequestDTO dto) {
-        // Valida se os valores de interesse enviados são permitidos pelo contrato
         dto.validarInteressesPermitidos();
 
         String nomeSanitizado = sanitizar(dto.getNome());
