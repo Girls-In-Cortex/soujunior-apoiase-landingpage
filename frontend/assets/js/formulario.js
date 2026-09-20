@@ -8,7 +8,7 @@
    ========================================================================== */
 
 // TROCAR quando o deploy do back estiver definido.
-const URL_PARCERIA = 'http://localhost:8080/parceria';
+const URL_PARCERIA = 'https://soujunior-backend.onrender.com/parceria';
 
 // valores aceitos em interesse
 const INTERESSES_VALIDOS = ['patrocinio', 'infraestrutura', 'mentoria', 'contratar', 'outra'];
