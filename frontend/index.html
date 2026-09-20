@@ -1,282 +1,254 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Apoie a SouJunior a partir de R$ 2,00</title>
-    <meta
-      name="description"
-      content="R$ 2,00 mantêm a SouJunior no ar por quase 4 horas. A comunidade é mantida por voluntários e por quem contribui com pouco, todo mês."
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Apoie a SouJunior a partir de R$ 2,00" />
-    <meta
-      property="og:description"
-      content="Mentoria gratuita e projetos open source para quem está começando em tecnologia."
-    />
-    <!-- TODO: descomentar e trocar DOMINIO quando o deploy estiver definido.
+  <title>Apoie a SouJunior a partir de R$ 2,00</title>
+  <meta name="description"
+    content="R$ 2,00 mantêm a SouJunior no ar por quase 4 horas. A comunidade é mantida por voluntários e por quem contribui com pouco, todo mês." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Apoie a SouJunior a partir de R$ 2,00" />
+  <meta property="og:description"
+    content="Mentoria gratuita e projetos open source para quem está começando em tecnologia." />
+  <!-- TODO: descomentar e trocar DOMINIO quando o deploy estiver definido.
        Sem isso o preview de link não carrega no WhatsApp, Discord e LinkedIn.
   <meta property="og:image" content="https://DOMINIO/assets/img/og-image.png">
   <meta property="og:url" content="https://DOMINIO">
   <meta name="twitter:card" content="summary_large_image">
   -->
 
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;600;700&family=Funnel+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;600;700&family=Funnel+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- Base compartilhada: não edite sem avisar o time -->
-    <link rel="stylesheet" href="assets/css/tokens.css" />
-    <link rel="stylesheet" href="assets/css/base.css" />
+  <!-- Base compartilhada: não edite sem avisar o time -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
 
-    <!-- Um arquivo por seção. Edite apenas o da sua seção. -->
-    <link rel="stylesheet" href="assets/css/secao-cabecalho.css" />
-    <link rel="stylesheet" href="assets/css/secao-hero.css" />
-    <link rel="stylesheet" href="assets/css/secao-quem-somos.css" />
-    <link rel="stylesheet" href="assets/css/secao-causa.css" />
-    <link rel="stylesheet" href="assets/css/secao-impacto.css" />
-    <link rel="stylesheet" href="assets/css/secao-planos.css" />
-    <link rel="stylesheet" href="assets/css/secao-parceria.css" />
-    <link rel="stylesheet" href="assets/css/secao-cta.css" />
-    <link rel="stylesheet" href="assets/css/secao-rodape.css" />
-  </head>
+  <!-- Um arquivo por seção. Edite apenas o da sua seção. -->
+  <link rel="stylesheet" href="assets/css/secao-cabecalho.css" />
+  <link rel="stylesheet" href="assets/css/secao-hero.css" />
+  <link rel="stylesheet" href="assets/css/secao-quem-somos.css" />
+  <link rel="stylesheet" href="assets/css/secao-causa.css" />
+  <link rel="stylesheet" href="assets/css/secao-impacto.css" />
+  <link rel="stylesheet" href="assets/css/secao-planos.css" />
+  <link rel="stylesheet" href="assets/css/secao-parceria.css" />
+  <link rel="stylesheet" href="assets/css/secao-cta.css" />
+  <link rel="stylesheet" href="assets/css/secao-rodape.css" />
+</head>
 
-  <body>
-    <a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
+<body>
+  <a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-    <!-- ===================================================================
+  <!-- ===================================================================
        CABEÇALHO  ·  #header  ·  Maria
        Desktop: logo, cinco âncoras e o botão Apoiar.
        Mobile: logo e o botão de menu.
        =================================================================== -->
-    <header class="cabecalho" id="header">
-      <div class="container cabecalho__interno">
-        <a class="cabecalho__logo" href="#header" aria-label="SouJunior, ir para o topo">
-          <!-- logo-color.svg, versão colorida, para fundo claro -->
-        </a>
+  <header class="cabecalho" id="header">
+    <div class="container cabecalho__interno">
+      <a class="cabecalho__logo" href="#header" aria-label="SouJunior, ir para o topo">
+        <img src="./assets/img/logo-simbolo.svg" alt="Logo SouJunior" />
+      </a>
 
-        <nav class="cabecalho__nav" aria-label="Navegação principal">
-          <ul class="cabecalho__lista">
-            <li><a href="#quem-somos">A SouJunior</a></li>
-            <li><a href="#causa">Para onde vai</a></li>
-            <li><a href="#impacto">Impacto</a></li>
-            <li><a href="#planos">Planos</a></li>
-            <li><a href="#parceria">Empresas</a></li>
-          </ul>
-          <a
-            class="botao botao--principal"
-            href="https://apoia.se/soujunior"
-            target="_blank"
-            rel="noopener"
-            aria-label="Apoiar a SouJunior no Apoia.se, abre em nova aba"
-            >Apoiar</a
-          >
-        </nav>
+      <nav class="cabecalho__nav" aria-label="Navegação principal">
+        <ul class="cabecalho__lista">
+          <li><a href="#quem-somos">A SouJunior</a></li>
+          <li><a href="#causa">Para onde vai</a></li>
+          <li><a href="#impacto">Impacto</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#parceria">Empresas</a></li>
+        </ul>
+        <a class="botao botao--principal" href="https://apoia.se/soujunior" target="_blank" rel="noopener"
+          aria-label="Apoiar a SouJunior no Apoia.se, abre em nova aba">Apoiar</a>
+      </nav>
 
-        <!-- Só no mobile. Precisa de foco preso, fechar com Esc e travar a rolagem.
+      <!-- Só no mobile. Precisa de foco preso, fechar com Esc e travar a rolagem.
            Qualquer display na .menu-mobile sobrescreve o atributo hidden:
            alterne por classe. -->
-        <button
-          class="cabecalho__menu"
-          type="button"
-          aria-expanded="false"
-          aria-controls="menu-mobile"
-          aria-label="Abrir menu"
-        >
-          <span class="cabecalho__barra" aria-hidden="true"></span>
-          <span class="cabecalho__barra" aria-hidden="true"></span>
-          <span class="cabecalho__barra" aria-hidden="true"></span>
-        </button>
-      </div>
+      <button class="cabecalho__menu" type="button" aria-expanded="false" aria-controls="menu-mobile"
+        aria-label="Abrir menu">
+        <span class="cabecalho__barra" aria-hidden="true"></span>
+        <span class="cabecalho__barra" aria-hidden="true"></span>
+        <span class="cabecalho__barra" aria-hidden="true"></span>
+      </button>
+    </div>
 
-      <div class="menu-mobile" id="menu-mobile" hidden>
-        <div class="container">
-          <button class="menu-mobile__fechar" type="button" aria-label="Fechar menu"></button>
-          <ul class="menu-mobile__lista">
-            <li><a href="#quem-somos">A SouJunior</a></li>
-            <li><a href="#causa">Para onde vai</a></li>
-            <li><a href="#impacto">Impacto</a></li>
-            <li><a href="#planos">Planos</a></li>
-            <li><a href="#parceria">Empresas</a></li>
-          </ul>
-          <a
-            class="botao botao--principal"
-            href="https://apoia.se/soujunior"
-            target="_blank"
-            rel="noopener"
-          >
-            Apoiar no Apoia.se
-          </a>
-        </div>
+    <div class="menu-mobile" id="menu-mobile" hidden>
+      <div class="container">
+        <button class="menu-mobile__fechar" type="button" aria-label="Fechar menu"></button>
+        <ul class="menu-mobile__lista">
+          <li><a href="#quem-somos">A SouJunior</a></li>
+          <li><a href="#causa">Para onde vai</a></li>
+          <li><a href="#impacto">Impacto</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#parceria">Empresas</a></li>
+        </ul>
+        <a class="botao botao--principal" href="https://apoia.se/soujunior" target="_blank" rel="noopener">
+          Apoiar no Apoia.se
+        </a>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main id="conteudo" tabindex="-1">
-      <!-- ===================================================================
+  <main id="conteudo" tabindex="-1">
+    <!-- ===================================================================
          ABERTURA  ·  #hero  ·  Maria
          Fundo cinza do kit. Dois botões no desktop, um no mobile.
          O mascote Juno é decorativo: aria-hidden e não pode gerar
          rolagem horizontal.
          =================================================================== -->
-      <section class="secao secao--cinza hero" id="hero">
-        <div class="container hero__interno">
-          <div class="hero__texto">
-            <h1>R$ 2,00 mantêm a SouJunior no ar por quase 4 horas.</h1>
-            <p class="hero__apoio">
-              A SouJunior é mantida por voluntários e por quem contribui com pouco, todo mês. A
-              partir de R$ 2,00 você entra nessa conta.
-            </p>
-            <div class="hero__acoes">
-              <a
-                class="botao botao--principal"
-                href="https://apoia.se/soujunior"
-                target="_blank"
-                rel="noopener"
-                aria-label="Apoiar no Apoia.se, abre em nova aba"
-                >Apoiar no Apoia.se</a
-              >
-              <!-- Segundo botão só no desktop -->
-              <a class="botao botao--secundario hero__secundario" href="#quem-somos"
-                >O que é a SouJunior</a
-              >
-            </div>
+    <section class="secao secao--cinza hero" id="hero">
+      <div class="container hero__interno">
+        <div class="hero__texto">
+          <h1>R$ 2,00 mantêm a SouJunior no ar por quase 4 horas.</h1>
+          <p class="hero__apoio">
+            A SouJunior é mantida por voluntários e por quem contribui com pouco, todo mês. A
+            partir de R$ 2,00 você entra nessa conta.
+          </p>
+          <div class="hero__acoes">
+            <a class="botao botao--principal" href="https://apoia.se/soujunior" target="_blank" rel="noopener"
+              aria-label="Apoiar no Apoia.se, abre em nova aba">Apoiar no Apoia.se</a>
+            <!-- Segundo botão só no desktop -->
+            <a class="botao botao--secundario hero__secundario" href="#quem-somos">O que é a SouJunior</a>
           </div>
-
-          <img class="hero__mascote" src="assets/img/mascote-juno.svg" alt="" aria-hidden="true" />
         </div>
-      </section>
 
-      <!-- ===================================================================
+        <img class="hero__mascote" src="assets/img/mascote-juno.svg" alt="" aria-hidden="true" />
+      </div>
+    </section>
+
+    <!-- ===================================================================
          O QUE É A SOUJUNIOR  ·  #quem-somos  ·  Rafaella
          Dois blocos: as quatro formas de participar e as áreas de atuação.
          =================================================================== -->
-      <section class="secao quem-somos" id="quem-somos">
-        <div class="container">
-          <div class="titulo-secao">
-            <h2>O que é a SouJunior</h2>
-            <p>
-              Um projeto open source que aproxima profissionais em início de carreira das empresas
-              de tecnologia. Tudo construído por trabalho voluntário, de júnior para júnior.
-            </p>
-          </div>
-
-          <h3>Quatro formas de fazer parte</h3>
-          <ul class="quem-somos__papeis">
-            <li class="quem-somos__papel quem-somos__papel--destaque">
-              <span class="tag">Você entra aqui</span>
-              <h4>Apoiador</h4>
-              <p>Sustenta a infraestrutura que mantém tudo no ar.</p>
-            </li>
-            <li class="quem-somos__papel">
-              <h4>Mentorado</h4>
-              <p>Recebe acompanhamento de quem já está na área.</p>
-            </li>
-            <li class="quem-somos__papel">
-              <h4>Mentor</h4>
-              <p>Doa tempo e experiência para quem está começando.</p>
-            </li>
-            <li class="quem-somos__papel">
-              <h4>Head</h4>
-              <p>Conduz uma das onze frentes da comunidade.</p>
-            </li>
-          </ul>
-
-          <h3>Onde os times atuam</h3>
-          <ul class="quem-somos__areas">
-            <li>Front-end</li>
-            <li>Back-end</li>
-            <li>Dados</li>
-            <li>Mobile</li>
-            <li>QA</li>
-            <li>DevOps</li>
-            <li>Produto</li>
-            <li>Ágil</li>
-            <li>UX/UI Design</li>
-            <li>Tech Recruiter</li>
-            <li>Social Media</li>
-          </ul>
+    <section class="secao quem-somos" id="quem-somos">
+      <div class="container">
+        <div class="titulo-secao">
+          <h2>O que é a SouJunior</h2>
+          <p>
+            Um projeto open source que aproxima profissionais em início de carreira das empresas
+            de tecnologia. Tudo construído por trabalho voluntário, de júnior para júnior.
+          </p>
         </div>
-      </section>
 
-      <!-- ===================================================================
+        <h3>Quatro formas de fazer parte</h3>
+        <ul class="quem-somos__papeis">
+          <li class="quem-somos__papel quem-somos__papel--destaque">
+            <span class="tag">Você entra aqui</span>
+            <h4>Apoiador</h4>
+            <p>Sustenta a infraestrutura que mantém tudo no ar.</p>
+          </li>
+          <li class="quem-somos__papel">
+            <h4>Mentorado</h4>
+            <p>Recebe acompanhamento de quem já está na área.</p>
+          </li>
+          <li class="quem-somos__papel">
+            <h4>Mentor</h4>
+            <p>Doa tempo e experiência para quem está começando.</p>
+          </li>
+          <li class="quem-somos__papel">
+            <h4>Head</h4>
+            <p>Conduz uma das onze frentes da comunidade.</p>
+          </li>
+        </ul>
+
+        <h3>Onde os times atuam</h3>
+        <ul class="quem-somos__areas">
+          <li>Front-end</li>
+          <li>Back-end</li>
+          <li>Dados</li>
+          <li>Mobile</li>
+          <li>QA</li>
+          <li>DevOps</li>
+          <li>Produto</li>
+          <li>Ágil</li>
+          <li>UX/UI Design</li>
+          <li>Tech Recruiter</li>
+          <li>Social Media</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================================================================
          PARA ONDE VAI A DOAÇÃO  ·  #causa  ·  Rafaella
          Dois cartões lado a lado no desktop, empilhados no mobile.
          =================================================================== -->
-      <section class="secao secao--cinza causa" id="causa">
-        <div class="container">
-          <div class="titulo-secao">
-            <h2>Para onde vai a sua doação</h2>
-            <p>
-              A sua contribuição vai para o desenvolvimento, a hospedagem e a manutenção dos
-              projetos.
-            </p>
-          </div>
-
-          <div class="causa__colunas">
-            <article class="cartao causa__cartao">
-              <h3>O que a sua doação cobre</h3>
-              <ol class="causa__itens">
-                <li>
-                  <span class="causa__marcador" aria-hidden="true">01</span>
-                  <div>
-                    <h4>Desenvolvimento e manutenção</h4>
-                    <p>
-                      O código é feito por voluntários, mas manter tudo funcionando tem custo todo
-                      mês.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <span class="causa__marcador" aria-hidden="true">02</span>
-                  <div>
-                    <h4>Mentoria e comunidade</h4>
-                    <p>
-                      Programas gratuitos para quem está começando, acompanhados por quem já está na
-                      área.
-                    </p>
-                  </div>
-                </li>
-              </ol>
-            </article>
-
-            <article class="cartao causa__cartao causa__cartao--azul">
-              <h3>O que nunca é cobrado</h3>
-              <ul class="causa__itens">
-                <li>
-                  <span class="causa__valor">R$ 0</span>
-                  <div>
-                    <h4>De quem estuda aqui</h4>
-                    <p>Nenhuma mensalidade, nenhum curso pago.</p>
-                  </div>
-                </li>
-                <li>
-                  <span class="causa__valor">R$ 0</span>
-                  <div>
-                    <h4>De quem procura vaga</h4>
-                    <p>Nenhuma taxa para se candidatar.</p>
-                  </div>
-                </li>
-                <li>
-                  <span class="causa__valor">R$ 0</span>
-                  <div>
-                    <h4>De quem contribui</h4>
-                    <p>O código é de todo mundo.</p>
-                  </div>
-                </li>
-              </ul>
-            </article>
-          </div>
+    <section class="secao secao--cinza causa" id="causa">
+      <div class="container">
+        <div class="titulo-secao">
+          <h2>Para onde vai a sua doação</h2>
+          <p>
+            A sua contribuição vai para o desenvolvimento, a hospedagem e a manutenção dos
+            projetos.
+          </p>
         </div>
-      </section>
 
-      <!-- ===================================================================
+        <div class="causa__colunas">
+          <article class="cartao causa__cartao">
+            <h3>O que a sua doação cobre</h3>
+            <ol class="causa__itens">
+              <li>
+                <span class="causa__marcador" aria-hidden="true">01</span>
+                <div>
+                  <h4>Desenvolvimento e manutenção</h4>
+                  <p>
+                    O código é feito por voluntários, mas manter tudo funcionando tem custo todo
+                    mês.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="causa__marcador" aria-hidden="true">02</span>
+                <div>
+                  <h4>Mentoria e comunidade</h4>
+                  <p>
+                    Programas gratuitos para quem está começando, acompanhados por quem já está na
+                    área.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </article>
+
+          <article class="cartao causa__cartao causa__cartao--azul">
+            <h3>O que nunca é cobrado</h3>
+            <ul class="causa__itens">
+              <li>
+                <span class="causa__valor">R$ 0</span>
+                <div>
+                  <h4>De quem estuda aqui</h4>
+                  <p>Nenhuma mensalidade, nenhum curso pago.</p>
+                </div>
+              </li>
+              <li>
+                <span class="causa__valor">R$ 0</span>
+                <div>
+                  <h4>De quem procura vaga</h4>
+                  <p>Nenhuma taxa para se candidatar.</p>
+                </div>
+              </li>
+              <li>
+                <span class="causa__valor">R$ 0</span>
+                <div>
+                  <h4>De quem contribui</h4>
+                  <p>O código é de todo mundo.</p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
          IMPACTO  ·  #impacto  ·  Alana
          Quatro números sobre navy, separados por régua fina no desktop.
          O filete âmbar acima de cada número é decorativo: faça em CSS,
@@ -291,99 +263,84 @@
          primeiro porque é a ordem exigida pela tag dl. Inverta na exibição
          com flex-direction: column-reverse no .impacto__dado.
          =================================================================== -->
-      <section class="secao secao--navy impacto" id="impacto">
-        <div class="container">
-          <div class="titulo-secao">
-            <h2>O que construímos até agora</h2>
-          </div>
-
-          <dl class="impacto__numeros">
-            <div class="impacto__dado">
-              <dt>Membros da comunidade</dt>
-              <dd class="impacto__valor">120</dd>
-            </div>
-            <div class="impacto__dado">
-              <dt>Mentores ativos</dt>
-              <dd class="impacto__valor">35</dd>
-            </div>
-            <div class="impacto__dado">
-              <dt>Pessoas empregadas</dt>
-              <dd class="impacto__valor">+50</dd>
-            </div>
-            <div class="impacto__dado">
-              <dt>Apoiadores</dt>
-              <dd class="impacto__valor">108</dd>
-            </div>
-          </dl>
+    <section class="secao secao--navy impacto" id="impacto">
+      <div class="container">
+        <div class="titulo-secao">
+          <h2>O que construímos até agora</h2>
         </div>
-      </section>
 
-      <!-- ===================================================================
+        <dl class="impacto__numeros">
+          <div class="impacto__dado">
+            <dt>Membros da comunidade</dt>
+            <dd class="impacto__valor">120</dd>
+          </div>
+          <div class="impacto__dado">
+            <dt>Mentores ativos</dt>
+            <dd class="impacto__valor">35</dd>
+          </div>
+          <div class="impacto__dado">
+            <dt>Pessoas empregadas</dt>
+            <dd class="impacto__valor">+50</dd>
+          </div>
+          <div class="impacto__dado">
+            <dt>Apoiadores</dt>
+            <dd class="impacto__valor">108</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================================================================
          ESCOLHA UM VALOR  ·  #planos  ·  Rafaella
          Três cartões. O de R$ 2 é o destacado: âmbar, sombra dura e tag.
          Cada valor é traduzido em tempo de infraestrutura no ar.
          =================================================================== -->
-      <section class="secao planos" id="planos">
-        <div class="container">
-          <div class="titulo-secao">
-            <h2>Escolha um valor</h2>
-            <p>
-              Cada valor traduzido em tempo de infraestrutura no ar, a partir do custo médio diário
-              de R$ 12,77.
-            </p>
-          </div>
-
-          <ul class="planos__lista">
-            <li class="cartao plano plano--destaque">
-              <div class="plano__conteudo">
-                <span class="tag">Sugerido</span>
-                <h3 class="plano__valor">R$ 2</h3>
-                <p>4 horas da SouJunior no ar.</p>
-              </div>
-              <a
-                class="botao botao--principal"
-                href="https://apoia.se/soujunior"
-                target="_blank"
-                rel="noopener"
-              >
-                Apoiar com R$ 2
-              </a>
-            </li>
-
-            <li class="cartao plano">
-              <div class="plano__conteudo">
-                <h3 class="plano__valor">R$ 10</h3>
-                <p>24h da SouJunior no ar.</p>
-              </div>
-              <a
-                class="botao botao--secundario"
-                href="https://apoia.se/soujunior"
-                target="_blank"
-                rel="noopener"
-              >
-                Apoiar com R$ 10
-              </a>
-            </li>
-
-            <li class="cartao plano">
-              <div class="plano__conteudo">
-                <h3 class="plano__valor">R$ 25</h3>
-                <p>2 dias inteiros da SouJunior no ar.</p>
-              </div>
-              <a
-                class="botao botao--secundario"
-                href="https://apoia.se/soujunior"
-                target="_blank"
-                rel="noopener"
-              >
-                Apoiar com R$ 25
-              </a>
-            </li>
-          </ul>
+    <section class="secao planos" id="planos">
+      <div class="container">
+        <div class="titulo-secao">
+          <h2>Escolha um valor</h2>
+          <p>
+            Cada valor traduzido em tempo de infraestrutura no ar, a partir do custo médio diário
+            de R$ 12,77.
+          </p>
         </div>
-      </section>
 
-      <!-- ===================================================================
+        <ul class="planos__lista">
+          <li class="cartao plano plano--destaque">
+            <div class="plano__conteudo">
+              <span class="tag">Sugerido</span>
+              <h3 class="plano__valor">R$ 2</h3>
+              <p>4 horas da SouJunior no ar.</p>
+            </div>
+            <a class="botao botao--principal" href="https://apoia.se/soujunior" target="_blank" rel="noopener">
+              Apoiar com R$ 2
+            </a>
+          </li>
+
+          <li class="cartao plano">
+            <div class="plano__conteudo">
+              <h3 class="plano__valor">R$ 10</h3>
+              <p>24h da SouJunior no ar.</p>
+            </div>
+            <a class="botao botao--secundario" href="https://apoia.se/soujunior" target="_blank" rel="noopener">
+              Apoiar com R$ 10
+            </a>
+          </li>
+
+          <li class="cartao plano">
+            <div class="plano__conteudo">
+              <h3 class="plano__valor">R$ 25</h3>
+              <p>2 dias inteiros da SouJunior no ar.</p>
+            </div>
+            <a class="botao botao--secundario" href="https://apoia.se/soujunior" target="_blank" rel="noopener">
+              Apoiar com R$ 25
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================================================================
          EMPRESAS E PATROCÍNIO  ·  #parceria  ·  Alana
          Duas colunas no desktop: texto mais contatos à esquerda,
          formulário à direita. Empilhado no mobile.
@@ -393,321 +350,220 @@
          opcionais     -> empresa, mensagem
          O campo interesse é uma lista, não um texto.
          =================================================================== -->
-      <section class="secao secao--azul parceria" id="parceria">
-        <div class="container parceria__interno">
-          <div class="parceria__texto">
-            <div class="titulo-secao">
-              <h2>Entre em contato</h2>
-              <p>
-                Patrocínio, créditos de infraestrutura, horas de mentoria do seu time ou contratar
-                quem está começando. Marque no formulário o que faz sentido para a sua empresa e a
-                organização responde direto para você.
-              </p>
-            </div>
-
-            <div class="parceria__contatos">
-              <h3>Onde a SouJunior está</h3>
-              <dl class="parceria__lista">
-                <div>
-                  <dt>Parcerias</dt>
-                  <dd><a href="mailto:parcerias@soujunior.tech">parcerias@soujunior.tech</a></dd>
-                </div>
-                <div>
-                  <dt>Site</dt>
-                  <dd>
-                    <a
-                      href="https://soujunior.tech"
-                      target="_blank"
-                      rel="noopener"
-                      aria-label="Site da SouJunior, abre em nova aba"
-                      >soujunior.tech</a
-                    >
-                  </dd>
-                </div>
-                <div>
-                  <dt>LinkedIn</dt>
-                  <dd>
-                    <a
-                      href="https://linkedin.com/company/soujunior"
-                      target="_blank"
-                      rel="noopener"
-                      aria-label="LinkedIn da SouJunior, abre em nova aba"
-                      >linkedin.com/company/soujunior</a
-                    >
-                  </dd>
-                </div>
-                <div>
-                  <dt>Instagram</dt>
-                  <dd>
-                    <a
-                      href="https://instagram.com/soujunior.tech"
-                      target="_blank"
-                      rel="noopener"
-                      aria-label="Instagram da SouJunior, abre em nova aba"
-                      >@soujunior.tech</a
-                    >
-                  </dd>
-                </div>
-                <div>
-                  <dt>YouTube</dt>
-                  <dd>
-                    <a
-                      href="https://youtube.com/@soujuniortech"
-                      target="_blank"
-                      rel="noopener"
-                      aria-label="YouTube da SouJunior, abre em nova aba"
-                      >@soujuniortech</a
-                    >
-                  </dd>
-                </div>
-                <div>
-                  <dt>GitHub</dt>
-                  <dd>
-                    <a
-                      href="https://github.com/SouJunior"
-                      target="_blank"
-                      rel="noopener"
-                      aria-label="GitHub da SouJunior, abre em nova aba"
-                      >github.com/SouJunior</a
-                    >
-                  </dd>
-                </div>
-                <div>
-                  <dt>Discord</dt>
-                  <dd>
-                    <a
-                      href="https://discord.gg/FkBcf3vdQZ"
-                      target="_blank"
-                      rel="noopener"
-                      aria-label="Discord da SouJunior, abre em nova aba"
-                      >Comunidade e dúvidas</a
-                    >
-                  </dd>
-                </div>
-                <div>
-                  <dt>WhatsApp</dt>
-                  <dd>
-                    <a
-                      href="https://chat.whatsapp.com/JJzCMlqMKlw1YOhOk7QB3W"
-                      target="_blank"
-                      rel="noopener"
-                      aria-label="Grupo de WhatsApp da SouJunior, abre em nova aba"
-                      >Grupo de avisos</a
-                    >
-                  </dd>
-                </div>
-              </dl>
-            </div>
+    <section class="secao secao--azul parceria" id="parceria">
+      <div class="container parceria__interno">
+        <div class="parceria__texto">
+          <div class="titulo-secao">
+            <h2>Entre em contato</h2>
+            <p>
+              Patrocínio, créditos de infraestrutura, horas de mentoria do seu time ou contratar
+              quem está começando. Marque no formulário o que faz sentido para a sua empresa e a
+              organização responde direto para você.
+            </p>
           </div>
 
-          <form class="cartao parceria__form" novalidate>
-            <div class="campo">
-              <label for="empresa">Nome da empresa (opcional)</label>
-              <input
-                type="text"
-                id="empresa"
-                name="empresa"
-                placeholder="Ex: SouJunior Tecnologia"
-              />
-            </div>
-
-            <div class="campo">
-              <label for="nome">Nome do contato</label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Como podemos te chamar"
-                required
-                aria-describedby="erro-nome"
-              />
-                <p class="campo__erro" id="erro-nome" hidden></p>
-            </div>
-
-            <div class="campo">
-              <label for="email">E-mail</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="nome@empresa.com.br"
-                required
-                aria-describedby="erro-email"
-              />
-              <p class="campo__erro" id="erro-email" hidden></p>
-            </div>
-
-            <!-- Grupo de caixas: precisa de fieldset e legend, senão o leitor de
-               tela não relaciona as opções à pergunta. -->
-            <fieldset class="campo campo--grupo">
-              <legend>Interesse</legend>
-              <p class="campo__ajuda" id="ajuda-interesse">Marque pelo menos uma opção</p>
-              <ul class="parceria__opcoes" aria-describedby="ajuda-interesse">
-                <li>
-                  <input
-                    type="checkbox"
-                    id="interesse-patrocinio"
-                    name="interesse"
-                    value="patrocinio"
-                  />
-                  <label for="interesse-patrocinio">Patrocínio</label>
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    id="interesse-infra"
-                    name="interesse"
-                    value="infraestrutura"
-                  />
-                  <label for="interesse-infra">Infraestrutura ou ferramentas</label>
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    id="interesse-mentoria"
-                    name="interesse"
-                    value="mentoria"
-                  />
-                  <label for="interesse-mentoria">Mentoria voluntária</label>
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    id="interesse-contratar"
-                    name="interesse"
-                    value="contratar"
-                  />
-                  <label for="interesse-contratar">Contratar juniores</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="interesse-outra" name="interesse" value="outra" />
-                  <label for="interesse-outra">Outra parceria</label>
-                </li>
-              </ul>
-              <p class="campo__erro" id="erro-interesse" hidden></p>
-            </fieldset>
-
-            <div class="campo">
-              <label for="mensagem">Mensagem (opcional)</label>
-              <textarea
-                id="mensagem"
-                name="mensagem"
-                rows="4"
-                placeholder="Conte o que você tem em mente"
-              ></textarea>
-            </div>
-
-            <button class="botao botao--principal" type="submit">Enviar proposta</button>
-
-            <p class="parceria__nota">
-              Os campos sem a marcação de opcional são obrigatórios. Usamos esses dados apenas para
-              responder à sua proposta.
-            </p>
-
-            <!-- Mensagem de sucesso ou de erro do envio.
-               O aria-live faz o leitor de tela anunciar sem mudar o foco. -->
-            <p class="parceria__retorno" role="status" aria-live="polite"></p>
-          </form>
+          <div class="parceria__contatos">
+            <h3>Onde a SouJunior está</h3>
+            <dl class="parceria__lista">
+              <div>
+                <dt>Parcerias</dt>
+                <dd><a href="mailto:parcerias@soujunior.tech">parcerias@soujunior.tech</a></dd>
+              </div>
+              <div>
+                <dt>Site</dt>
+                <dd>
+                  <a href="https://soujunior.tech" target="_blank" rel="noopener"
+                    aria-label="Site da SouJunior, abre em nova aba">soujunior.tech</a>
+                </dd>
+              </div>
+              <div>
+                <dt>LinkedIn</dt>
+                <dd>
+                  <a href="https://linkedin.com/company/soujunior" target="_blank" rel="noopener"
+                    aria-label="LinkedIn da SouJunior, abre em nova aba">linkedin.com/company/soujunior</a>
+                </dd>
+              </div>
+              <div>
+                <dt>Instagram</dt>
+                <dd>
+                  <a href="https://instagram.com/soujunior.tech" target="_blank" rel="noopener"
+                    aria-label="Instagram da SouJunior, abre em nova aba">@soujunior.tech</a>
+                </dd>
+              </div>
+              <div>
+                <dt>YouTube</dt>
+                <dd>
+                  <a href="https://youtube.com/@soujuniortech" target="_blank" rel="noopener"
+                    aria-label="YouTube da SouJunior, abre em nova aba">@soujuniortech</a>
+                </dd>
+              </div>
+              <div>
+                <dt>GitHub</dt>
+                <dd>
+                  <a href="https://github.com/SouJunior" target="_blank" rel="noopener"
+                    aria-label="GitHub da SouJunior, abre em nova aba">github.com/SouJunior</a>
+                </dd>
+              </div>
+              <div>
+                <dt>Discord</dt>
+                <dd>
+                  <a href="https://discord.gg/FkBcf3vdQZ" target="_blank" rel="noopener"
+                    aria-label="Discord da SouJunior, abre em nova aba">Comunidade e dúvidas</a>
+                </dd>
+              </div>
+              <div>
+                <dt>WhatsApp</dt>
+                <dd>
+                  <a href="https://chat.whatsapp.com/JJzCMlqMKlw1YOhOk7QB3W" target="_blank" rel="noopener"
+                    aria-label="Grupo de WhatsApp da SouJunior, abre em nova aba">Grupo de avisos</a>
+                </dd>
+              </div>
+            </dl>
+          </div>
         </div>
-      </section>
 
-      <!-- ===================================================================
+        <form class="cartao parceria__form" novalidate>
+          <div class="campo">
+            <label for="empresa">Nome da empresa (opcional)</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Ex: SouJunior Tecnologia" />
+          </div>
+
+          <div class="campo">
+            <label for="nome">Nome do contato</label>
+            <input type="text" id="nome" name="nome" placeholder="Como podemos te chamar" required
+              aria-describedby="erro-nome" />
+            <p class="campo__erro" id="erro-nome" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="nome@empresa.com.br" required
+              aria-describedby="erro-email" />
+            <p class="campo__erro" id="erro-email" hidden></p>
+          </div>
+
+          <!-- Grupo de caixas: precisa de fieldset e legend, senão o leitor de
+               tela não relaciona as opções à pergunta. -->
+          <fieldset class="campo campo--grupo">
+            <legend>Interesse</legend>
+            <p class="campo__ajuda" id="ajuda-interesse">Marque pelo menos uma opção</p>
+            <ul class="parceria__opcoes" aria-describedby="ajuda-interesse">
+              <li>
+                <input type="checkbox" id="interesse-patrocinio" name="interesse" value="patrocinio" />
+                <label for="interesse-patrocinio">Patrocínio</label>
+              </li>
+              <li>
+                <input type="checkbox" id="interesse-infra" name="interesse" value="infraestrutura" />
+                <label for="interesse-infra">Infraestrutura ou ferramentas</label>
+              </li>
+              <li>
+                <input type="checkbox" id="interesse-mentoria" name="interesse" value="mentoria" />
+                <label for="interesse-mentoria">Mentoria voluntária</label>
+              </li>
+              <li>
+                <input type="checkbox" id="interesse-contratar" name="interesse" value="contratar" />
+                <label for="interesse-contratar">Contratar juniores</label>
+              </li>
+              <li>
+                <input type="checkbox" id="interesse-outra" name="interesse" value="outra" />
+                <label for="interesse-outra">Outra parceria</label>
+              </li>
+            </ul>
+            <p class="campo__erro" id="erro-interesse" hidden></p>
+          </fieldset>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem (opcional)</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte o que você tem em mente"></textarea>
+          </div>
+
+          <button class="botao botao--principal" type="submit">Enviar proposta</button>
+
+          <p class="parceria__nota">
+            Os campos sem a marcação de opcional são obrigatórios. Usamos esses dados apenas para
+            responder à sua proposta.
+          </p>
+
+          <!-- Mensagem de sucesso ou de erro do envio.
+               O aria-live faz o leitor de tela anunciar sem mudar o foco. -->
+          <p class="parceria__retorno" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================================================================
          FECHAMENTO  ·  #cta  ·  Maria
          Faixa âmbar com título, linha de apoio e um botão.
          =================================================================== -->
-      <section class="secao secao--ambar cta-final" id="cta">
-        <div class="container cta-final__interno">
-          <h2>Para a SouJunior continuar, precisamos de você.</h2>
-          <p>Menos que um café, e mantém no ar a comunidade que ajuda quem está começando.</p>
-          <a
-            class="botao botao--secundario"
-            href="https://apoia.se/soujunior"
-            target="_blank"
-            rel="noopener"
-            aria-label="Apoiar a SouJunior no Apoia.se, abre em nova aba"
-          >
-            Apoiar no Apoia.se
-          </a>
-        </div>
-      </section>
-    </main>
+    <section class="secao secao--ambar cta-final" id="cta">
+      <div class="container cta-final__interno">
+        <h2>Para a SouJunior continuar, precisamos de você.</h2>
+        <p>Menos que um café, e mantém no ar a comunidade que ajuda quem está começando.</p>
+        <a class="botao botao--secundario" href="https://apoia.se/soujunior" target="_blank" rel="noopener"
+          aria-label="Apoiar a SouJunior no Apoia.se, abre em nova aba">
+          Apoiar no Apoia.se
+        </a>
+      </div>
+    </section>
+  </main>
 
-    <!-- ===================================================================
+  <!-- ===================================================================
        RODAPÉ  ·  #footer  ·  Rafaella
        Logo em versão clara sobre o navy, descrição, duas colunas e crédito.
        =================================================================== -->
-    <footer class="secao secao--navy rodape" id="footer">
-      <div class="container">
-        <div class="rodape__topo">
-          <div class="rodape__marca">
-            <span class="rodape__logo">
-              <!-- logo-claro.svg, versão clara, para fundo escuro -->
-            </span>
-            <p>Comunidade brasileira de tecnologia para quem está começando.</p>
-          </div>
-
-          <nav class="rodape__colunas" aria-label="Links do rodapé">
-            <div class="rodape__coluna">
-              <h3>Nesta página</h3>
-              <ul>
-                <li><a href="#quem-somos">A SouJunior</a></li>
-                <li><a href="#causa">Sua doação</a></li>
-                <li><a href="#impacto">Números</a></li>
-                <li><a href="#planos">Apoiar</a></li>
-                <li><a href="#parceria">Contato</a></li>
-              </ul>
-            </div>
-
-            <div class="rodape__coluna">
-              <h3>Canais</h3>
-              <ul>
-                <li>
-                  <a
-                    href="https://apoia.se/soujunior"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Apoia.se da SouJunior, abre em nova aba"
-                    >Apoia.se</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://discord.gg/FkBcf3vdQZ"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Discord da SouJunior, abre em nova aba"
-                    >Discord</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://chat.whatsapp.com/JJzCMlqMKlw1YOhOk7QB3W"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Grupo de WhatsApp da SouJunior, abre em nova aba"
-                    >WhatsApp</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/SouJunior"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="GitHub da SouJunior, abre em nova aba"
-                    >GitHub</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </nav>
+  <footer class="secao secao--navy rodape" id="footer">
+    <div class="container">
+      <div class="rodape__topo">
+        <div class="rodape__marca">
+          <span class="rodape__logo">
+            <img src="assets/img/logo-claro.svg" alt="SouJunior">
+          </span>
+          <p>Comunidade brasileira de tecnologia para quem está começando.</p>
         </div>
 
-        <p class="rodape__base">Girls in Cortex, Hackathon SouJunior 2026</p>
-      </div>
-    </footer>
+        <nav class="rodape__colunas" aria-label="Links do rodapé">
+          <div class="rodape__coluna">
+            <h3>Nesta página</h3>
+            <ul>
+              <li><a href="#quem-somos">A SouJunior</a></li>
+              <li><a href="#causa">Sua doação</a></li>
+              <li><a href="#impacto">Números</a></li>
+              <li><a href="#planos">Apoiar</a></li>
+              <li><a href="#parceria">Contato</a></li>
+            </ul>
+          </div>
 
-    <script type="module" src="assets/js/menu.js"></script>
-    <script type="module" src="assets/js/impacto.js"></script>
-    <script type="module" src="assets/js/formulario.js"></script>
-  </body>
+          <div class="rodape__coluna">
+            <h3>Canais</h3>
+            <ul>
+              <li>
+                <a href="https://apoia.se/soujunior" target="_blank" rel="noopener"
+                  aria-label="Apoia.se da SouJunior, abre em nova aba">Apoia.se</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/FkBcf3vdQZ" target="_blank" rel="noopener"
+                  aria-label="Discord da SouJunior, abre em nova aba">Discord</a>
+              </li>
+              <li>
+                <a href="https://chat.whatsapp.com/JJzCMlqMKlw1YOhOk7QB3W" target="_blank" rel="noopener"
+                  aria-label="Grupo de WhatsApp da SouJunior, abre em nova aba">WhatsApp</a>
+              </li>
+              <li>
+                <a href="https://github.com/SouJunior" target="_blank" rel="noopener"
+                  aria-label="GitHub da SouJunior, abre em nova aba">GitHub</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <p class="rodape__base">Girls in Cortex, Hackathon SouJunior 2026</p>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/menu.js"></script>
+  <script type="module" src="assets/js/impacto.js"></script>
+  <script type="module" src="assets/js/formulario.js"></script>
+</body>
+
 </html>
