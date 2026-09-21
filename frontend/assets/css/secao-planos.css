@@ -22,11 +22,27 @@
    gap: var(--space-8);
 }
 
+/* A transição fica declarada aqui, uma vez só para entrada e hover, porque
+   as duas mexem em transform e se sobrescreveriam em regras separadas.
+   Mesmo arranjo de .quem-somos__papel. */
 .plano{
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    gap: var(--space-8);
+   transition: opacity var(--duracao-media) var(--curva-padrao),
+      transform var(--duracao-rapida) var(--curva-padrao),
+      box-shadow var(--duracao-rapida) var(--curva-padrao);
+}
+
+/* Mesmo hover dos cartões de "Quatro formas de fazer parte".
+   Precisa de .planos na frente: sem isso o seletor empata em classes com
+   .secao--visivel .planos__lista > li, que perde no desempate por tipo e
+   deixaria o transform: none da entrada atropelar o deslocamento. */
+.planos .plano:hover,
+.planos .plano:focus-within{
+   box-shadow: var(--shadow);
+   transform: translateY(-2px);
 }
 
 .plano__conteudo {
@@ -37,7 +53,7 @@
 
 .plano__valor{
    font-size: var(--fs-h2);
-   line-height: var(--landing-tight);
+   line-height: var(--leading-tight);
 }
 
 .plano .botao {
@@ -64,6 +80,34 @@
 
 .plano--destaque .plano__valor .plano--destaque p {
    color: var(--color-on-highlight);
+}
+
+/* ENTRADA ESCALONADA
+   Disparada pelo .secao--visivel que o animacoes.js põe na seção. */
+.js-ativo .planos__lista > li {
+   opacity: 0;
+   transform: translateY(var(--space-2));
+}
+
+.secao--visivel .planos__lista > li {
+   opacity: 1;
+   transform: none;
+}
+
+.secao--visivel .planos__lista > li:nth-child(2) {
+   transition-delay: var(--atraso-escalonado);
+}
+
+.secao--visivel .planos__lista > li:nth-child(3) {
+   transition-delay: calc(var(--atraso-escalonado) * 2);
+}
+
+/* Terminada a entrada, o atraso não pode sobrar para o hover, senão o
+   terceiro cartão levaria 120ms para reagir ao ponteiro. Precisa vir depois
+   das regras de :nth-child, que têm a mesma especificidade. */
+.secao--visivel .planos__lista > li:hover,
+.secao--visivel .planos__lista > li:focus-within {
+   transition-delay: 0s;
 }
 
 @media (min-width: 64rem) {

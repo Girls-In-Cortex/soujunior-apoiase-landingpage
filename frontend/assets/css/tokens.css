@@ -189,6 +189,33 @@
 
   /* Altura mínima de elemento interativo. Acima dos 44px exigidos. */
   --control-height: 48px;
+
+  /* ----------------------------------------------------------------------
+     MOVIMENTO
+     As três durações são as que já estavam espalhadas pelo CSS: só ganharam
+     nome. A curva sai direto e freia no fim, sem aceleração inicial, para
+     acompanhar a borda de 2px e a sombra sem desfoque: movimento curto e
+     direto, nunca flutuando.
+
+     Tudo isso é desligado pelo bloco de prefers-reduced-motion do base.css.
+     ---------------------------------------------------------------------- */
+
+  --duracao-rapida: 150ms;
+  /* estado: hover, foco, seleção */
+  --duracao-media: 250ms;
+  /* entrada de seção e painel do menu */
+  --duracao-lenta: 300ms;
+  /* sublinhado que cresce e barras do menu */
+
+  --curva-padrao: cubic-bezier(0.2, 0, 0, 1);
+
+  --atraso-escalonado: 60ms;
+  /* passo entre itens de uma mesma lista */
+
+  /* Quanto dura a contagem de um número, nos valores do #impacto e no 4 do
+     título do hero. Só o contador.js lê este token: nenhuma regra de CSS o
+     usa, mas ele mora aqui para a duração ficar junto das outras. */
+  --duracao-contagem: 1200ms;
 }
 
 /* ==========================================================================

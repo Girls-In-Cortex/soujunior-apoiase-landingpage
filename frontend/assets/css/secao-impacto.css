@@ -40,6 +40,32 @@
   background-color: var(--color-highlight);
 }
 
+/* ENTRADA ESCALONADA
+   Independente do contador do impacto.js, que tem o próprio observer. */
+.js-ativo .impacto__dado {
+  opacity: 0;
+  transform: translateY(var(--space-2));
+  transition: opacity var(--duracao-media) var(--curva-padrao),
+    transform var(--duracao-media) var(--curva-padrao);
+}
+
+.secao--visivel .impacto__dado {
+  opacity: 1;
+  transform: none;
+}
+
+.secao--visivel .impacto__dado:nth-child(2) {
+  transition-delay: var(--atraso-escalonado);
+}
+
+.secao--visivel .impacto__dado:nth-child(3) {
+  transition-delay: calc(var(--atraso-escalonado) * 2);
+}
+
+.secao--visivel .impacto__dado:nth-child(4) {
+  transition-delay: calc(var(--atraso-escalonado) * 3);
+}
+
 @media (min-width: 64rem) {
   .impacto__numeros {
     flex-direction: row;

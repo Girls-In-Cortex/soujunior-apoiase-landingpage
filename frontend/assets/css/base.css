@@ -153,6 +153,10 @@ strong {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    /* Sem isto o escalonamento das listas continuaria segurando cada item
+       por 60, 120, 180ms: a duração some, mas a espera fica. */
+    transition-delay: 0s !important;
+    animation-delay: 0s !important;
   }
 }
 
@@ -213,6 +217,30 @@ strong {
 }
 
 /* --------------------------------------------------------------------------
+   ENTRADA AO ROLAR
+   A seção sobe 8px e aparece quando entra na tela, uma vez só.
+
+   Tudo depende de .js-ativo, que o script do <head> põe no <html> antes da
+   primeira pintura. Sem JavaScript a classe nunca chega, nenhuma regra daqui
+   se aplica e a página é vista inteira: o estado invisível nunca fica preso.
+
+   O cabeçalho não tem a classe .secao e fica de fora de propósito: transform
+   num ancestral quebraria o position: fixed do painel do menu e o sticky.
+   -------------------------------------------------------------------------- */
+
+.js-ativo .secao {
+  opacity: 0;
+  transform: translateY(var(--space-2));
+  transition: opacity var(--duracao-media) var(--curva-padrao),
+    transform var(--duracao-media) var(--curva-padrao);
+}
+
+.js-ativo .secao--visivel {
+  opacity: 1;
+  transform: none;
+}
+
+/* --------------------------------------------------------------------------
    BOTÕES
    Componente compartilhado. Altura sempre 48px, raio 4, borda de 2px.
    -------------------------------------------------------------------------- */
@@ -231,10 +259,18 @@ strong {
   cursor: pointer;
   border: var(--stroke-2) solid var(--color-heading);
   border-radius: var(--radius);
-  transition: background-color 0.15s ease;
+  transition: background-color var(--duracao-rapida) var(--curva-padrao),
+    color var(--duracao-rapida) var(--curva-padrao),
+    transform var(--duracao-rapida) var(--curva-padrao),
+    box-shadow var(--duracao-rapida) var(--curva-padrao);
 }
 
-/* Principal: um por seção, no máximo */
+/* Principal: um por seção, no máximo.
+   O hover afunda o botão na direção da sombra e encurta a sombra na mesma
+   medida, como se ele estivesse sendo pressionado. O fundo não muda mais:
+   o antigo hover ficava quase igual ao navy da borda e o contorno sumia.
+   Os deslocamentos saem de --shadow-offset, e não de um valor fixo, para
+   continuarem casando com a sombra no desktop, onde ela passa a 6px. */
 .botao--principal {
   background-color: var(--color-action);
   color: var(--color-text-on-brand);
@@ -242,17 +278,24 @@ strong {
 }
 
 .botao--principal:hover {
-  background-color: var(--color-action-hover);
+  transform: translate(calc(var(--shadow-offset) / 2), calc(var(--shadow-offset) / 2));
+  box-shadow: calc(var(--shadow-offset) / 2) calc(var(--shadow-offset) / 2) 0 var(--color-heading);
 }
 
-/* Secundário: ação alternativa, sem sombra */
+.botao--principal:active {
+  transform: translate(var(--shadow-offset), var(--shadow-offset));
+  box-shadow: none;
+}
+
+/* Secundário: ação alternativa, sem sombra. O hover inverte as cores. */
 .botao--secundario {
   background-color: var(--color-bg);
   color: var(--color-heading);
 }
 
 .botao--secundario:hover {
-  background-color: var(--color-surface);
+  background-color: var(--color-heading);
+  color: var(--color-text-on-brand);
 }
 
 .botao:disabled {

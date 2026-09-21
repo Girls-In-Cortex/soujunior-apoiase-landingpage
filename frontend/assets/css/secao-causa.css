@@ -22,6 +22,18 @@
    gap: var(--space-4);
 }
 
+/* Mesmo hover dos cartões de "Quatro formas de fazer parte". */
+.causa__cartao{
+   transition: transform var(--duracao-rapida) var(--curva-padrao),
+      box-shadow var(--duracao-rapida) var(--curva-padrao);
+}
+
+.causa__cartao:hover,
+.causa__cartao:focus-within{
+   box-shadow: var(--shadow);
+   transform: translateY(-2px);
+}
+
 .causa__cartao h3{
    margin-bottom: var(--space-6);
 }
@@ -78,6 +90,14 @@
    line-height: var(--leading-snug);
    color: var(--color-heading);
 }
+/* Fecha a seção depois dos dois cartões. Texto secundário e o mesmo respiro
+   que separa os blocos no resto da página. */
+.causa__nota{
+   margin-top: var(--space-8);
+   max-width: none;
+   color: var(--color-text-muted);
+}
+
 @media (min-width: 64rem) {
   .causa__colunas {
     grid-template-columns: 1fr 1fr;
