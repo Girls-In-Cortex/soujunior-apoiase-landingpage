@@ -83,21 +83,21 @@ O argumento central é que **apoiar é uma das quatro formas oficiais de fazer p
 <table>
   <tr>
     <td align="center" width="50%">
-      <img width="1366" height="622" alt="Abertura da landing page no desktop" src="https://github.com/user-attachments/assets/0034701a-0d49-4f23-8095-7c9117626349" />
+      <img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/f5718513-5ced-46e0-a342-02711ae69479" />
       <sub><b>Abertura</b></sub>
     </td>
     <td align="center" width="50%">
-      <img width="1366" height="622" alt="Seção de impacto no desktop" src="https://github.com/user-attachments/assets/6ca198d3-8e0c-470e-acd5-fd33f3cf21a2" />
+      <img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/ad156d88-ddf6-4397-b71b-52426c3fc544" />
       <sub><b>Impacto</b></sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="50%">
-      <img width="1366" height="622" alt="Seção de planos no desktop" src="https://github.com/user-attachments/assets/5251c6fc-df69-4fe8-8f6a-3489e97126cc" />
+      <img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/fa63197f-4ede-486a-8520-74ba242df346" />
       <sub><b>Planos</b></sub>
     </td>
     <td align="center" width="50%">
-      <img width="1366" height="622" alt="Formulário de parceria no desktop" src="https://github.com/user-attachments/assets/15b0eb14-22ec-439a-857f-f82702bd2c5c" />
+      <img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/ecbb29a4-7fed-4b76-b999-90291085c4f0" />
       <sub><b>Empresas e patrocínio</b></sub>
     </td>
   </tr>
@@ -108,21 +108,21 @@ O argumento central é que **apoiar é uma das quatro formas oficiais de fazer p
 <table>
   <tr>
     <td align="center">
-      <img width="1217" height="2404" alt="Screenshot_2026-09-17-17-27-21-478_com android chrome" src="https://github.com/user-attachments/assets/cbc47965-a444-4b71-833c-7f473c3e31c1" />
+      <img width="1080" height="2201" alt="Screenshot_20260921_194856_Chrome" src="https://github.com/user-attachments/assets/45046386-dd36-4ac3-8145-ec7cc1728857" />
       <sub><b>Apoia-se</b></sub>
     </td>
     <td align="center">
-      <img width="1214" height="2313" alt="Screenshot_2026-09-17-17-28-06-662_com android chrome" src="https://github.com/user-attachments/assets/4891672f-d1a4-495f-8f61-e688f8475e4c" />
+      <img width="1080" height="2201" alt="Screenshot_20260921_194909_Chrome" src="https://github.com/user-attachments/assets/0f0ed394-a1ed-4883-99b5-7f3ddbffaa2e" />
       <sub><b>Planos</b></sub>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img width="1214" height="2220" alt="Screenshot_2026-09-17-17-27-54-566_com android chrome" src="https://github.com/user-attachments/assets/7d796c4e-db6c-4e75-a409-878898077f60" />
+      <img width="1080" height="2201" alt="Screenshot_20260921_194922_Chrome" src="https://github.com/user-attachments/assets/8eb0fdcd-81b4-44b3-888c-83f0d8eabb43" />
       <sub><b>Métricas</b></sub>
     </td>
     <td align="center">
-      <img width="1207" height="2099" alt="Screenshot_2026-09-17-17-28-18-466_com android chrome" src="https://github.com/user-attachments/assets/6e418fae-6889-44bd-8166-13fec608dc8d" />
+      <img width="1080" height="2201" alt="Screenshot_20260921_194930_Chrome" src="https://github.com/user-attachments/assets/68f23dde-6c00-4646-bd72-b79cc3c64037" />
       <sub><b>Contato</b></sub>
     </td>
   </tr>
