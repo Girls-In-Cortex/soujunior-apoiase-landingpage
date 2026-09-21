@@ -16,6 +16,10 @@ const INTERESSES_VALIDOS = ['patrocinio', 'infraestrutura', 'mentoria', 'contrat
 const form = document.querySelector('.parceria__form');
 const retorno = document.querySelector('.parceria__retorno');
 const botaoEnviar = form.querySelector('button[type="submit"]');
+// Guarda o rótulo que está no HTML para repor depois do envio. Antes ele
+// estava escrito à mão lá embaixo, então qualquer troca de texto no HTML se
+// perdia no primeiro envio e o botão voltava com o rótulo antigo.
+const rotuloBotao = botaoEnviar.textContent;
 const grupoInteresse = form.querySelector('.campo--grupo');
 
 // só nome e email têm validador de texto. empresa e mensagem são opcionais,
@@ -148,6 +152,6 @@ form.addEventListener('submit', async (evento) => {
       'Não conseguimos enviar agora. Tente novamente em instantes ou fale conosco pelo WhatsApp.';
   } finally {
     botaoEnviar.disabled = false;
-    botaoEnviar.textContent = 'Enviar proposta';
+    botaoEnviar.textContent = rotuloBotao;
   }
 });

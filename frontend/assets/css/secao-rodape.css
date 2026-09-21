@@ -18,17 +18,26 @@
    display: block;
 }
 
+/* inline-block para o link encolher até o logo. Como <a> é inline e a
+   imagem é block, sem isso a caixa do link ocupa a linha inteira do rodapé
+   e tanto o clique quanto o anel de foco vazam muito além do logo. */
+.rodape__logo a {
+   display: inline-block;
+}
+
 .rodape__logo img,
 .rodape__logo svg {
   width: auto;
   height: var(--space-8);
 }
 
+/* Empilhado no mobile. As três colunas entram no desktop: repeat(2, auto)
+   valia para toda largura e jogava a terceira para uma segunda linha. */
 .rodape__colunas{
    display: grid;
-   grid-template-columns: repeat(2, auto);
+   grid-template-columns: 1fr;
    justify-content: start;
-   gap: var(--space-8)
+   gap: var(--space-8);
 }
 
 .rodape__coluna h3 {
@@ -39,14 +48,32 @@
 }
 
 .rodape__coluna a {
+   position: relative;
    display: inline-block;
    padding-block: var(--space-2);
    text-decoration: none;
 }
 
-.rodape__coluna a:hover{
-   color: var(--color-link-on-brand);
-   text-decoration: underline;
+/* Mesmo sublinhado que cresce do cabeçalho, em --color-link-on-dark porque
+   aqui o fundo é navy. O bottom desconta o padding para o filete encostar
+   no texto, como no cabeçalho, que não tem padding. */
+.rodape__coluna a::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: var(--space-2);
+   width: 0;
+   height: var(--stroke-2);
+   background-color: var(--color-link-on-dark);
+   transition: width var(--duracao-lenta) var(--curva-padrao);
+}
+
+.rodape__coluna a:hover {
+   color: var(--color-link-on-dark);
+}
+
+.rodape__coluna a:hover::after {
+   width: 100%;
 }
 
 .rodape__base {
@@ -62,6 +89,7 @@
   }
  
   .rodape__colunas {
+    grid-template-columns: repeat(3, auto);
     gap: var(--space-16);
   }
 }

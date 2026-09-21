@@ -5,7 +5,11 @@
    CSS desta seção e de mais nenhuma. Use sempre os tokens do tokens.css,
    nunca valor solto.
    ========================================================================== */
+   /* Mesmo respiro entre titulo e descricao das demais secoes:
+      grid com gap de --space-4, como em secao-causa.css e secao-planos.css. */
    .quem-somos .titulo-secao {
+      display: grid;
+      gap: var(--space-4);
       margin-bottom: var(--space-8);
    }
 
@@ -25,14 +29,76 @@
       margin-top: var(--space-8);
    }
 
+   /* A transição fica declarada uma vez só para entrada e hover, porque as
+      duas mexem em transform e se sobrescreveriam em regras separadas.
+      A opacidade é da entrada; transform e sombra servem às duas. */
    .quem-somos__papel {
       padding: var(--space-6);
       background-color: var(--color-bg);
       border: var(--stroke-2) solid var(--color-border);
       border-radius: var(--radius);
       min-height: calc(var(--space-24) + var(--space-16));
+      transition: opacity var(--duracao-media) var(--curva-padrao),
+         transform var(--duracao-rapida) var(--curva-padrao),
+         box-shadow var(--duracao-rapida) var(--curva-padrao);
    }
-   
+
+   /* O link preenche o cartão para toda a área ser clicável. O inherit e o
+      text-decoration mantêm a aparência: sem eles o texto viraria azul de
+      link e sublinhado. */
+   .quem-somos__papel a {
+      display: block;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+   }
+
+   /* ENTRADA ESCALONADA
+      Os cartões só animam quando a seção recebe .secao--visivel, então o
+      observer continua vendo apenas a seção, sem observer por item. */
+   .js-ativo .quem-somos__papeis > li {
+      opacity: 0;
+      transform: translateY(var(--space-2));
+   }
+
+   .secao--visivel .quem-somos__papeis > li {
+      opacity: 1;
+      transform: none;
+   }
+
+   .secao--visivel .quem-somos__papeis > li:nth-child(2) {
+      transition-delay: var(--atraso-escalonado);
+   }
+
+   .secao--visivel .quem-somos__papeis > li:nth-child(3) {
+      transition-delay: calc(var(--atraso-escalonado) * 2);
+   }
+
+   .secao--visivel .quem-somos__papeis > li:nth-child(4) {
+      transition-delay: calc(var(--atraso-escalonado) * 3);
+   }
+
+   /* Terminada a entrada, o atraso não pode sobrar para o hover, senão o
+      quarto cartão levaria 180ms para reagir ao ponteiro. Precisa vir depois
+      das regras de :nth-child, que têm a mesma especificidade. */
+   .secao--visivel .quem-somos__papeis > li:hover,
+   .secao--visivel .quem-somos__papeis > li:focus-within {
+      transition-delay: 0s;
+   }
+
+   /* Os quatro cartões reagem ao ponteiro, inclusive o Head, que não é link.
+      O :focus-within continua na lista mas só dispara nos três que têm <a>
+      dentro: sem descendente focável ele nunca casa.
+
+      Precisa de .quem-somos na frente: sem isso o seletor empata em classes
+      com .secao--visivel .quem-somos__papeis > li, perde no desempate por
+      tipo e o transform: none da entrada atropelaria o deslocamento. */
+   .quem-somos .quem-somos__papel:hover,
+   .quem-somos .quem-somos__papel:focus-within {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+   }
+
    .quem-somos__papel--destaque{
       box-shadow: var(--shadow);
       background-color: var(--color-highlight);
@@ -56,19 +122,21 @@
       margin-top: var(--space-4);
    }
 
-   .quem-somos__areas li:nth-child(9){
-      background-color: var(--color-highlight);
-      color: var(--color-on-highlight);
+   .quem-somos__areas li {
+      padding: var(--space-2) var(--space-3);
+      border: var(--stroke-2) solid var(--color-border);
+      border-radius: var(--radius-pill);
+      color: var(--color-heading);
+      font-size: var(--fs-caption);
+      transition: background-color var(--duracao-rapida) var(--curva-padrao),
+         color var(--duracao-rapida) var(--curva-padrao);
    }
 
-   .quem-somos__areas li {
-
-    padding: var(--space-2) var(--space-3);
-    border: var(--stroke-2) solid var(--color-border);
-    border-radius: var(--radius-pill);
-    color: var(--color-heading);
-    font-size: var(--fs-caption);
-
+   /* Ambar responde ao ponteiro, em vez de ficar preso
+      em uma posicao da lista. */
+   .quem-somos__areas li:hover {
+      background-color: var(--color-highlight);
+      color: var(--color-on-highlight);
    }
 
    @media(min-width: 64rem){

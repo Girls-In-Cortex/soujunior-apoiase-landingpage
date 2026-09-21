@@ -22,6 +22,14 @@
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 
+  <!-- Liga a entrada das seções antes da primeira pintura. Precisa ser aqui,
+       inline: os módulos do fim do body são deferidos, a página apareceria
+       visível e só depois sumiria para animar. Sem JS a classe não entra e
+       nada fica invisível. -->
+  <script>
+    document.documentElement.classList.add('js-ativo');
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -108,7 +116,8 @@
     <section class="secao secao--cinza hero" id="hero">
       <div class="container hero__interno">
         <div class="hero__texto">
-          <h1>R$ 2,00 mantêm a SouJunior no ar por quase 4 horas.</h1>
+          <h1>R$ 2,00 mantêm a SouJunior no ar por quase <span class="hero__destaque"><span
+                class="hero__contador" data-valor="4">4</span> horas</span>.</h1>
           <p class="hero__apoio">
             A SouJunior é mantida por voluntários e por quem contribui com pouco, todo mês. A
             partir de R$ 2,00 você entra nessa conta.
@@ -142,17 +151,28 @@
         <h3>Quatro formas de fazer parte</h3>
         <ul class="quem-somos__papeis">
           <li class="quem-somos__papel quem-somos__papel--destaque">
-            <span class="tag">Você entra aqui</span>
-            <h4>Apoiador</h4>
-            <p>Sustenta a infraestrutura que mantém tudo no ar.</p>
+            <a href="https://apoia.se/soujunior" target="_blank" rel="noopener"
+              aria-label="Apoiador: apoiar a SouJunior no Apoia.se, abre em nova aba">
+              <span class="tag">Você entra aqui</span>
+              <h4>Apoiador</h4>
+              <p>Sustenta a infraestrutura que mantém tudo no ar.</p>
+            </a>
           </li>
           <li class="quem-somos__papel">
-            <h4>Mentorado</h4>
-            <p>Recebe acompanhamento de quem já está na área.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5u7fhd-T1FrF1El9XTkubvCXfLK_jnCCa7TFF39_kDcUong/viewform"
+              target="_blank" rel="noopener"
+              aria-label="Mentorado ou júnior: formulário de inscrição da SouJunior, abre em nova aba">
+              <h4>Mentorado/Júnior</h4>
+              <p>Recebe acompanhamento de quem já está na área.</p>
+            </a>
           </li>
           <li class="quem-somos__papel">
-            <h4>Mentor</h4>
-            <p>Doa tempo e experiência para quem está começando.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeEg8fNGsY1W1ZCfLU5QvjuSxJvZotJzbNdeYPmlw5REx0Og/viewform"
+              target="_blank" rel="noopener"
+              aria-label="Mentor: formulário de inscrição da SouJunior, abre em nova aba">
+              <h4>Mentor</h4>
+              <p>Doa tempo e experiência para quem está começando.</p>
+            </a>
           </li>
           <li class="quem-somos__papel">
             <h4>Head</h4>
@@ -186,8 +206,8 @@
         <div class="titulo-secao">
           <h2>Para onde vai a sua doação</h2>
           <p>
-            A sua contribuição vai para o desenvolvimento, a hospedagem e a manutenção dos
-            projetos.
+            Cada centavo arrecadado no Apoia.se é destinado à manutenção de servidores,
+            ferramentas de mentoria e suporte aos projetos open source.
           </p>
         </div>
 
@@ -245,6 +265,11 @@
             </ul>
           </article>
         </div>
+
+        <p class="causa__nota">
+          Seu apoio complementa o trabalho voluntário, garantindo que as ferramentas
+          necessárias para ensinar estejam sempre online e estáveis.
+        </p>
       </div>
     </section>
 
@@ -366,10 +391,6 @@
             <h3>Onde a SouJunior está</h3>
             <dl class="parceria__lista">
               <div>
-                <dt>Parcerias</dt>
-                <dd><a href="mailto:parcerias@soujunior.tech">parcerias@soujunior.tech</a></dd>
-              </div>
-              <div>
                 <dt>Site</dt>
                 <dd>
                   <a href="https://soujunior.tech" target="_blank" rel="noopener"
@@ -411,13 +432,6 @@
                     aria-label="Discord da SouJunior, abre em nova aba">Comunidade e dúvidas</a>
                 </dd>
               </div>
-              <div>
-                <dt>WhatsApp</dt>
-                <dd>
-                  <a href="https://chat.whatsapp.com/JJzCMlqMKlw1YOhOk7QB3W" target="_blank" rel="noopener"
-                    aria-label="Grupo de WhatsApp da SouJunior, abre em nova aba">Grupo de avisos</a>
-                </dd>
-              </div>
             </dl>
           </div>
         </div>
@@ -454,15 +468,15 @@
               </li>
               <li>
                 <input type="checkbox" id="interesse-infra" name="interesse" value="infraestrutura" />
-                <label for="interesse-infra">Infraestrutura ou ferramentas</label>
-              </li>
-              <li>
-                <input type="checkbox" id="interesse-mentoria" name="interesse" value="mentoria" />
-                <label for="interesse-mentoria">Mentoria voluntária</label>
+                <label for="interesse-infra">Infraestrutura</label>
               </li>
               <li>
                 <input type="checkbox" id="interesse-contratar" name="interesse" value="contratar" />
                 <label for="interesse-contratar">Contratar juniores</label>
+              </li>
+              <li>
+                <input type="checkbox" id="interesse-mentoria" name="interesse" value="mentoria" />
+                <label for="interesse-mentoria">Mentoria voluntária</label>
               </li>
               <li>
                 <input type="checkbox" id="interesse-outra" name="interesse" value="outra" />
@@ -477,7 +491,7 @@
             <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte o que você tem em mente"></textarea>
           </div>
 
-          <button class="botao botao--principal" type="submit">Enviar proposta</button>
+          <button class="botao botao--principal" type="submit">Quero ser parceiro institucional</button>
 
           <p class="parceria__nota">
             Os campos sem a marcação de opcional são obrigatórios. Usamos esses dados apenas para
@@ -516,7 +530,9 @@
       <div class="rodape__topo">
         <div class="rodape__marca">
           <span class="rodape__logo">
-            <img src="assets/img/logo-claro.svg" alt="SouJunior">
+            <a href="#header" aria-label="SouJunior, ir para o topo">
+              <img src="assets/img/logo-claro.svg" alt="SouJunior">
+            </a>
           </span>
           <p>Comunidade brasileira de tecnologia para quem está começando.</p>
         </div>
@@ -545,12 +561,24 @@
                   aria-label="Discord da SouJunior, abre em nova aba">Discord</a>
               </li>
               <li>
-                <a href="https://chat.whatsapp.com/JJzCMlqMKlw1YOhOk7QB3W" target="_blank" rel="noopener"
-                  aria-label="Grupo de WhatsApp da SouJunior, abre em nova aba">WhatsApp</a>
-              </li>
-              <li>
                 <a href="https://github.com/SouJunior" target="_blank" rel="noopener"
                   aria-label="GitHub da SouJunior, abre em nova aba">GitHub</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rodape__coluna">
+            <h3>Faça parte</h3>
+            <ul>
+              <li>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5u7fhd-T1FrF1El9XTkubvCXfLK_jnCCa7TFF39_kDcUong/viewform"
+                  target="_blank" rel="noopener"
+                  aria-label="Formulário de inscrição para júnior, abre em nova aba">Júnior</a>
+              </li>
+              <li>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeEg8fNGsY1W1ZCfLU5QvjuSxJvZotJzbNdeYPmlw5REx0Og/viewform"
+                  target="_blank" rel="noopener"
+                  aria-label="Formulário de inscrição para mentor, abre em nova aba">Mentor</a>
               </li>
             </ul>
           </div>
@@ -564,6 +592,7 @@
   <script type="module" src="assets/js/menu.js"></script>
   <script type="module" src="assets/js/impacto.js"></script>
   <script type="module" src="assets/js/formulario.js"></script>
+  <script type="module" src="assets/js/animacoes.js"></script>
 </body>
 
 </html>

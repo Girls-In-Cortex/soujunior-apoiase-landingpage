@@ -9,6 +9,7 @@
 .cabecalho {
    position: sticky;
    top: 0;
+   z-index: 10;
    width: 100%;
    height: var(--altura-cabecalho);
    background-color: var(--color-bg);
@@ -51,7 +52,8 @@
    background-color: var(--color-heading);
    border-radius: var(--radius);
 
-   transition: transform 0.3s ease, opacity 0.3s ease;
+   transition: transform var(--duracao-lenta) var(--curva-padrao),
+      opacity var(--duracao-lenta) var(--curva-padrao);
 }
 
 /* ==========================================================================
@@ -75,6 +77,14 @@ body.menu-aberto .cabecalho__barra:nth-child(3) {
    transform: translateY(calc(var(--space-2) * -1)) rotate(-45deg);
 }
 
+/* O estado FECHADO é o padrão, e quem abre é a classe .menu-mobile--aberto.
+   Antes era o contrário: o fechado morava em .menu-mobile[hidden], então
+   remover a classe não mudava nada, nenhuma transição começava e o menu.js
+   tinha de adivinhar o fim com um setTimeout. Agora a saída é uma transição
+   de verdade e o JS espera o transitionend.
+
+   O atributo hidden entra só no fim dessa saída. Aí o [hidden] do base.css
+   aplica display: none e tira o painel do fluxo e do caminho do Tab. */
 .menu-mobile {
    position: fixed;
    top: var(--altura-cabecalho, 80px);
@@ -86,22 +96,23 @@ body.menu-aberto .cabecalho__barra:nth-child(3) {
    overflow-y: auto;
    padding: var(--space-4) var(--gutter);
 
-   /* Menu Aberto */
-   opacity: 1;
-   visibility: visible;
-   transform: scale(1);
-   transform-origin: top center;
-   /* Animacao a partir da base do cabeçalho */
-   transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out, visibility 0.25s ease-in-out;
-}
-
-/* Menu Fechado (Atributo hidden) */
-.menu-mobile[hidden] {
-   display: block !important;
    opacity: 0;
    visibility: hidden;
-   transform: scale(0.98);
+   /* Desce 8px a partir da base do cabeçalho. Era scale(0.98), mas a página
+      não usa escala em lugar nenhum: movimento curto e direto, como o resto.
+      O transform-origin saiu junto, só existia por causa da escala. */
+   transform: translateY(calc(var(--space-2) * -1));
    pointer-events: none;
+   transition: opacity var(--duracao-media) var(--curva-padrao),
+      transform var(--duracao-media) var(--curva-padrao),
+      visibility var(--duracao-media) var(--curva-padrao);
+}
+
+.menu-mobile--aberto {
+   opacity: 1;
+   visibility: visible;
+   transform: none;
+   pointer-events: auto;
 }
 
 .menu-mobile__fechar {
@@ -165,7 +176,7 @@ body.menu-aberto .cabecalho__barra:nth-child(3) {
       display: block;
       width: calc(var(--space-8) * 5);
       height: var(--space-8);
-      background-image: url("/frontend/assets/img/logo-color.svg");
+      background-image: url("../img/logo-color.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: left center;
@@ -190,7 +201,7 @@ body.menu-aberto .cabecalho__barra:nth-child(3) {
       position: relative;
       font-family: var(--font-family);
       font-size: var(--fs-body);
-      font-weight: var(--weight-medium);
+      font-weight: var(--weight-semibold);
       color: var(--color-text);
       text-decoration: none;
    }
@@ -203,7 +214,7 @@ body.menu-aberto .cabecalho__barra:nth-child(3) {
       bottom: 0;
       left: 0;
       background-color: var(--color-text);
-      transition: width 0.3s ease;
+      transition: width var(--duracao-lenta) var(--curva-padrao);
    }
 
    .cabecalho__lista a:hover::after {

@@ -76,17 +76,39 @@ O argumento central é que **apoiar é uma das quatro formas oficiais de fazer p
 
 **Vídeo de apresentação:** _a definir_
 
-<!-- Inserir aqui o GIF ou capturas de tela do mobile e do desktop -->
-<img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/0034701a-0d49-4f23-8095-7c9117626349" />
-<img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/010473c2-4be5-43ca-9566-56daed0357a8" />
-<img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/337008ca-8c90-40de-b744-7b1a3316c708" />
-<img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/6ca198d3-8e0c-470e-acd5-fd33f3cf21a2" />
-<img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/5251c6fc-df69-4fe8-8f6a-3489e97126cc" />
-<img width="1366" height="622" alt="image" src="https://github.com/user-attachments/assets/15b0eb14-22ec-439a-857f-f82702bd2c5c" />
+<!-- Inserir aqui o GIF, se houver -->
+
+**Desktop**
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img width="1366" height="622" alt="Abertura da landing page no desktop" src="https://github.com/user-attachments/assets/0034701a-0d49-4f23-8095-7c9117626349" />
+      <sub><b>Abertura</b></sub>
+    </td>
+    <td align="center" width="50%">
+      <img width="1366" height="622" alt="Seção de impacto no desktop" src="https://github.com/user-attachments/assets/6ca198d3-8e0c-470e-acd5-fd33f3cf21a2" />
+      <sub><b>Impacto</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img width="1366" height="622" alt="Seção de planos no desktop" src="https://github.com/user-attachments/assets/5251c6fc-df69-4fe8-8f6a-3489e97126cc" />
+      <sub><b>Planos</b></sub>
+    </td>
+    <td align="center" width="50%">
+      <img width="1366" height="622" alt="Formulário de parceria no desktop" src="https://github.com/user-attachments/assets/15b0eb14-22ec-439a-857f-f82702bd2c5c" />
+      <sub><b>Empresas e patrocínio</b></sub>
+    </td>
+  </tr>
+</table>
+
+**Mobile**
+
 <table>
   <tr>
     <td align="center">
-      <<img width="1217" height="2404" alt="Screenshot_2026-09-17-17-27-21-478_com android chrome" src="https://github.com/user-attachments/assets/cbc47965-a444-4b71-833c-7f473c3e31c1" />
+      <img width="1217" height="2404" alt="Screenshot_2026-09-17-17-27-21-478_com android chrome" src="https://github.com/user-attachments/assets/cbc47965-a444-4b71-833c-7f473c3e31c1" />
       <sub><b>Apoia-se</b></sub>
     </td>
     <td align="center">
@@ -118,13 +140,13 @@ A página foi estruturada como uma jornada, conduzindo o visitante da causa até
 |---|---|---|
 | `#header` | Cabeçalho | Navegação e CTA sempre acessível |
 | `#hero` | Abertura | Responde em 5 segundos por que apoiar, com o CTA principal |
-| `#quem-somos` | O que é a SouJunior | Apresenta a comunidade, as áreas de atuação e as quatro formas de participar |
+| `#quem-somos` | O que é a SouJunior | Apresenta a comunidade, as áreas de atuação e as quatro formas de participar. Os cartões levam ao Apoia.se e aos formulários de júnior e de mentor |
 | `#causa` | Para onde vai a doação | Prestação de contas: desenvolvimento, hospedagem e manutenção dos projetos |
 | `#impacto` | Impacto | Membros da comunidade, mentores ativos, pessoas empregadas e apoiadores, com dados fornecidos pela organização |
 | `#planos` | Escolha um valor | R$ 2, R$ 10 e R$ 25, cada valor traduzido em tempo de infraestrutura no ar, com destaque no valor de entrada |
-| `#parceria` | Empresas e patrocínio | Contatos da SouJunior e formulário de proposta institucional, com seleção de tipo de interesse |
+| `#parceria` | Empresas e patrocínio | Canais da SouJunior e formulário de proposta institucional, com seleção de tipo de interesse |
 | `#cta` | Fechamento | Último pedido de apoio antes do rodapé |
-| `#footer` | Rodapé | Apoia.se, Discord, WhatsApp, GitHub e licença |
+| `#footer` | Rodapé | Três colunas: navegação da página, canais (Apoia.se, Discord e GitHub) e "Faça parte", com os formulários de júnior e de mentor |
 
 ### Imagens
 
@@ -133,12 +155,12 @@ A página foi estruturada como uma jornada, conduzindo o visitante da causa até
 O que a página usa no lugar:
 
 - **Logo da SouJunior**, em SVG, nas duas versões oficiais
-- **Mascotes oficiais da SouJunior**, vindos do UI Kit, sempre como elemento decorativo: entram com `alt` vazio e `aria-hidden`
-- **Formas geométricas autorais** em SVG, criadas para o projeto, sem risco de licença
+- **Mascote oficial da SouJunior**, vindo do UI Kit, sempre como elemento decorativo: entra com `alt` vazio e `aria-hidden`
+- **Favicon**, em SVG
 
-Isso torna a página mais leve, elimina requisições de imagem e remove qualquer dependência de banco de imagem ou de crédito de terceiro.
+Sem fotografia, a página fica mais leve e não depende de banco de imagem nem de crédito de terceiro. Os SVGs de logo pesam poucos KB cada.
 
-Se em algum momento for necessário adicionar uma imagem, ela deve ter **no máximo 300 KB** e licença aberta declarada, para não comprometer a performance verificada pelo Lighthouse no CI.
+Se em algum momento for necessário adicionar uma imagem, ela deve ter **no máximo 300 KB** e licença aberta declarada. O CI verifica esse limite a cada pull request.
 
 <p align="right"><a href="#topo">Voltar ao topo</a></p>
 
@@ -154,9 +176,19 @@ HTML, CSS e JavaScript puro entregam uma página mais leve, sem etapa de build, 
 
 ### Design tokens em CSS Variables
 
-Cores, tamanhos de fonte, espaçamentos, raios e espessuras de traço vivem em `tokens.css`. Nenhum valor é escrito solto no código.
+Cores, tamanhos de fonte, espaçamentos, raios, espessuras de traço e movimento vivem em `tokens.css`. Praticamente todo valor vem de token. As exceções são pontuais: ajustes de alinhamento de ícone e limites de largura de texto.
+
+Os tokens de movimento cobrem três durações de transição, a curva padrão e os atrasos de escalonamento das listas. Assim a animação também se ajusta em um único arquivo.
 
 Isso permite alterar a identidade visual inteira em um único arquivo, e foi o que possibilitou validar contraste antes de escrever qualquer componente.
+
+### Animação
+
+As animações seguem a linguagem visual da página: movimento curto e direto, sem flutuação nem escala. As seções entram com opacidade e um deslocamento de 8px quando alcançam a tela, uma vez só, por `IntersectionObserver`. Listas entram escalonadas em 60ms. O número do título do hero conta até o valor final, com um marca-texto âmbar crescendo junto.
+
+O estado inicial das animações depende de uma classe aplicada por JavaScript no `<html>`. Sem JavaScript, a página aparece completa e estática.
+
+Tudo respeita `prefers-reduced-motion`, incluindo os atrasos de escalonamento.
 
 ### Um arquivo de CSS por seção
 
@@ -200,23 +232,25 @@ Valores aceitos em `interesse`: `patrocinio`, `infraestrutura`, `mentoria`, `con
 
 | Status | Corpo | Quando |
 |---|---|---|
-| `200` | `{ "ok": true }` | Proposta recebida e enviada |
+| `200` | `{ "ok": true }` | Proposta recebida e processada |
 | `400` | `{ "ok": false, "erro": "..." }` | Campo ausente ou inválido |
-| `429` | `{ "ok": false, "erro": "..." }` | Limite de requisições excedido |
+| `429` | texto simples | Limite de requisições excedido |
 
 ### Segurança
 
 - Credenciais de e-mail em variáveis de ambiente, nunca no repositório
 - `.env` no `.gitignore`, com `.env.example` versionado como modelo
-- Sanitização da entrada antes de qualquer processamento
+- Sanitização dos campos de texto antes da montagem do e-mail
 - Limite de requisições por IP na rota do formulário
-- CORS restrito à origem do front-end em produção
+- CORS liberado para a origem do front-end em produção e para `http://localhost:3000`, que segue na lista para facilitar o desenvolvimento local
 - Nenhum dado pessoal armazenado: a proposta é encaminhada por e-mail e não persiste em banco
 
 ### Limitações conhecidas
 
 - O controle de requisições por IP é mantido em memória, então zera quando o serviço reinicia. Para o escopo deste projeto é suficiente, e a decisão está registrada aqui de forma consciente.
 - A primeira chamada ao back-end pode ser mais lenta por conta da inicialização da JVM em ambiente de hospedagem gratuita. O botão de envio exibe estado de carregamento para cobrir esse intervalo.
+- O menu mobile não implementa focus trap. Com o painel aberto, a navegação por teclado alcança o conteúdo atrás dele. A decisão foi documentar em vez de entregar uma implementação parcial no fim do prazo.
+- Links de navegação do menu mobile e do rodapé ficam abaixo dos 44px recomendados de alvo de toque.
 
 <p align="right"><a href="#topo">Voltar ao topo</a></p>
 
@@ -237,19 +271,20 @@ A cor de acento âmbar tem uma limitação deliberada: branco sobre ela resulta 
 ### Navegação e interação
 
 - Foco visível em todo elemento interativo, com anel de 3px e afastamento de 2px
-- Alvo de toque mínimo de 48px de altura em botões e campos
+- Botões, campos e etiquetas com no mínimo 48px de altura. Links de navegação em lista ficam abaixo disso e estão registrados nas limitações conhecidas
 - Hierarquia de headings sem pulos, de `h1` a `h4`
-- Menu mobile com `aria-expanded`, foco preso enquanto aberto, fechamento por `Esc` e bloqueio da rolagem de fundo
+- Menu mobile com `aria-expanded`, fechamento por `Esc` e bloqueio da rolagem de fundo
 - Cor nunca é o único meio de comunicar estado: erro de formulário tem borda e mensagem de texto
 - Rótulo de campo sempre visível, nunca substituído por texto de exemplo dentro do campo
 - Grupo de caixas de seleção dentro de `fieldset` com `legend`, para o leitor de tela relacionar as opções à pergunta
+- O grupo de tipo de interesse usa checkboxes reais, visualmente apresentados como etiquetas clicáveis. A caixa continua focável por teclado, marcável pela barra de espaço e associada ao rótulo
 - Toda animação respeita `prefers-reduced-motion`
 - Elementos decorativos marcados com `aria-hidden`
-- Links que saem do domínio sinalizados visualmente e no `aria-label`
+- Links que saem do domínio usam `rel="noopener"` e, na maioria dos casos, `aria-label` indicando o destino e que abrem em nova aba
 
 ### Verificação contínua
 
-O CI roda Lighthouse e validação de HTML a cada pull request. Cada seção é testada por QA assim que entregue, incluindo navegação apenas por teclado, responsividade a partir do mobile e verificação de todos os links.
+A cada pull request o CI roda lint, checagem de link quebrado e verificação de tamanho de imagem, e coleta um relatório do Lighthouse. Cada seção é testada por QA assim que entregue, incluindo navegação apenas por teclado, responsividade a partir do mobile e verificação de todos os links.
 
 <p align="right"><a href="#topo">Voltar ao topo</a></p>
 
@@ -264,6 +299,8 @@ Do kit foram adotadas a tipografia, Funnel Display nos títulos e Funnel Sans no
 A paleta divergiu por contraste, mas a solução veio de dentro do próprio kit: o azul primário, `#3C7EF9`, resulta em 3.79:1 com texto branco e reprova no mínimo de 4.5:1 exigido para texto de corpo. O botão principal usa então a cor Destaque do kit, `#0E14BF`, que resulta em 11.22:1, e o hover usa a Secundária, `#0A1662`, com 16.10:1.
 
 Os títulos mantêm o navy do código em produção da organização, `#00205F`, com 15.31:1 no branco.
+
+**Arquivo completo no Figma:** https://www.figma.com/design/RvJORvQXAGGLrSFOFdqO4v/Girls-in-Cortex---Landing-Apoia.se-SouJunior
 
 | Página do arquivo | O que traz | Link direto |
 |---|---|---|
@@ -292,7 +329,7 @@ O kit traz um amarelo de destaque, `#FACC15`. A página usa um âmbar mais quent
 |---|---|
 | Front-end | HTML5, CSS3 com variáveis nativas, JavaScript ES6+ em módulos |
 | Back-end | Java 17, Spring Boot |
-| Infra e CI | GitHub Actions, Lighthouse CI, validação de HTML |
+| Infra e CI | GitHub Actions, Lighthouse CI, ESLint, checagem de links |
 
 Sem framework de front-end, sem biblioteca de CSS e sem etapa de build no front.
 
@@ -322,25 +359,47 @@ cd soujunior-apoiase-landingpage
 
 **2. Rodar o front-end**
 
-Abra `frontend/index.html` no navegador, ou use a extensão Live Server no VS Code para recarregar automaticamente ao salvar.
+> **O front precisa ser servido por HTTP.** Abrir `frontend/index.html` direto no navegador não funciona: os scripts são módulos ES, e o navegador bloqueia módulos em `file://` por CORS. Sem servidor, menu, contador, formulário e animações não rodam.
+
+Use a extensão **Live Server** no VS Code, clicando com o botão direito em `frontend/index.html` e escolhendo "Open with Live Server", ou qualquer servidor local:
+
+```bash
+cd frontend
+npx http-server -p 8080
+```
+
+E abra `http://localhost:8080`.
 
 **3. Configurar o back-end**
 
-Crie o arquivo `.env` dentro de `backend/`, usando `.env.example` como modelo, e preencha com as credenciais SMTP.
+O envio do formulário usa a **API do Gmail por OAuth**, não SMTP. Crie o arquivo `.env` dentro de `back-parceria/`, usando o `.env.example` da mesma pasta como modelo:
 
 ```bash
-cp .env.example backend/.env
+cp back-parceria/.env.example back-parceria/.env
 ```
+
+Preencha as variáveis:
+
+| Variável | O que é |
+|---|---|
+| `GMAIL_CLIENT_ID` | ID do cliente OAuth no Google Cloud |
+| `GMAIL_CLIENT_SECRET` | Chave secreta do mesmo cliente |
+| `GMAIL_REFRESH_TOKEN` | Refresh token gerado para a conta remetente |
+| `EMAIL_DESTINO` | Endereço que recebe as propostas |
 
 > O arquivo `.env` está no `.gitignore` e nunca deve ser enviado ao repositório.
 
 **4. Rodar o back-end**
 
+O Maven Wrapper está versionado, então não é preciso ter o Maven instalado:
+
 ```bash
-cd backend
-mvn clean package
-java -jar target/app.jar
+cd back-parceria
+./mvnw clean package
+java -jar target/back-parceria-0.0.1-SNAPSHOT.jar
 ```
+
+No Windows, use `mvnw.cmd` no lugar de `./mvnw`.
 
 O servidor sobe em `http://localhost:8080`.
 
@@ -353,15 +412,15 @@ O servidor sobe em `http://localhost:8080`.
 ```
 .
 ├── .github/              # Templates de issue e PR, workflows do GitHub Actions
-├── backend/              # API Java (Spring Boot) que recebe, valida e envia o formulário
-│   └── src/
+├── back-parceria/        # API Java (Spring Boot) que recebe, valida e envia o formulário
+│   ├── src/
+│   └── .env.example      # Modelo de variáveis de ambiente
 ├── frontend/             # Interface da landing page
 │   ├── index.html
 │   └── assets/
 │       ├── css/          # tokens.css, base.css e um arquivo por seção
-│       ├── js/           # menu, contador do impacto e formulário
+│       ├── js/           # menu, impacto, formulário, animações e contador
 │       └── img/
-├── .env.example          # Modelo de variáveis de ambiente
 ├── .gitignore
 ├── LICENSE
 └── README.md
@@ -411,9 +470,8 @@ style: ajusta espaçamento do cabeçalho
 |---|---|---|
 | Front-end | vercel | em funcionamento |
 | Back-end | render | em funcionamento |
-| Tempo de resposta | 5 seg |
 
-Front-end e back-end são publicados em serviços separados. O back-end libera CORS apenas para a origem do front-end, e ambos rodam sob HTTPS.
+Front-end e back-end são publicados em serviços separados, ambos sob HTTPS. O back-end libera CORS para a origem do front-end em produção e mantém `http://localhost:3000` na lista para o desenvolvimento local.
 
 <p align="right"><a href="#topo">Voltar ao topo</a></p>
 
@@ -442,8 +500,7 @@ Front-end e back-end são publicados em serviços separados. O back-end libera C
         <a href="https://github.com/mariasoaresv"><img src="https://github.com/mariasoaresv.png" width="70px" style="border-radius: 50%;" alt="Nome"/><br><sub><b>Maria Soares</b></sub><br><sub>Front-end</sub></a><br><a href="https://linkedin.com/in/maria-fernanda-soares-silva"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
-        <a 
-href="https://github.com/Gasparini-11"><img src="https://github.com/gasparini-11.png" width="70px" style="border-radius: 50%;" alt="Rafaella Gasparini"/><br><sub><b>Rafaella Gasparini</b></sub><br><sub>Front-End</sub></a><br><a href="https://www.linkedin.com/in/rafaella-de-jesus-gasparini"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/Gasparini-11"><img src="https://github.com/Gasparini-11.png" width="70px" style="border-radius: 50%;" alt="Rafaella Gasparini"/><br><sub><b>Rafaella Gasparini</b></sub><br><sub>Front-End</sub></a><br><a href="https://www.linkedin.com/in/rafaella-de-jesus-gasparini"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       </tr>
     <tr>
@@ -452,13 +509,10 @@ href="https://github.com/Gasparini-11"><img src="https://github.com/gasparini-11
       </td>
       <td align="center" width="120px">
         <a href="https://github.com/paulahcarvalho"><img src="https://github.com/paulahcarvalho.png" width="70px" style="border-radius: 50%;" alt="Paula Carvalho"/><br><sub><b>Paula Carvalho</b></sub><br><sub>PO/PM Júnior</sub></a><br><a href="https://linkedin.com/in/paula-carvalho-390147108/"><img src="https://shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
-</a>
-  </td>
+      </td>
       <td align="center" width="120px">
         <a href="https://github.com/carolseveroo"><img src="https://github.com/carolseveroo.png" width="70px" style="border-radius: 50%;" alt="Carol Severo"/><br><sub><b>Carol Severo</b></sub><br><sub>Mentora</sub></a><br><a href="https://www.linkedin.com/in/eucarolsevero"><img src="https://shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
 </td>
-    </tr>
-      </td>
     </tr>
   </table>
 </div>

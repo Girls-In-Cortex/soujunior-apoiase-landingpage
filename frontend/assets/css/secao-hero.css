@@ -68,6 +68,51 @@
    margin-top: var(--space-4);
 }
 
+/* O 4 conta de 0 até o valor final quando o hero entra na tela.
+   A largura precisa ficar reservada: sem isso o dígito muda de largura a cada
+   quadro, o h1 reflui e a linha inteira dança. tabular-nums iguala a largura
+   dos dígitos e o inline-block com min-width garante o piso caso a fonte não
+   traga o recurso. */
+.hero__contador {
+   display: inline-block;
+   min-width: 1ch;
+   text-align: center;
+   font-variant-numeric: tabular-nums;
+}
+
+/* Marca-texto âmbar em "4 horas", como caneta passada por cima.
+   O isolation cria um contexto de empilhamento próprio: sem ele o ::before
+   com z-index -1 escaparia para trás do fundo da seção e sumiria.
+   O nowrap evita o trecho quebrar em duas linhas, caso em que o retângulo
+   absoluto cobriria da primeira à última linha em vez de acompanhar o texto. */
+.hero__destaque {
+   position: relative;
+   isolation: isolate;
+   white-space: nowrap;
+}
+
+/* Metade inferior do trecho. Absoluto, então não entra no fluxo e não mexe
+   na altura da linha. Cresce da esquerda para a direita. */
+.hero__destaque::before {
+   content: '';
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   height: 50%;
+   z-index: -1;
+   background-color: var(--color-highlight);
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: transform var(--duracao-media) var(--curva-padrao);
+}
+
+/* Cresce junto com o início da contagem: os dois saem da mesma entrada da
+   seção, sem atraso entre eles. */
+.secao--visivel .hero__destaque::before {
+   transform: scaleX(1);
+}
+
 /* ==========================================================================
    TELAS MAIORES
    ========================================================================== */
