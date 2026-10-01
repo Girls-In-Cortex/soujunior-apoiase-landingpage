@@ -4,7 +4,7 @@
 
 # Landing Page · Apoia.se SouJunior
 
-> Projeto desenvolvido pela equipe **Girls In Cortex** para o Hackathon da **SouJunior**.
+> Projeto desenvolvido pela equipe **Girls In Cortex** para o Hackathon da **SouJunior**. **Ficando em 3º lugar na premiação**.
 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white" height="26" alt="HTML5" />
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=plastic&logo=css3&logoColor=white" height="26" alt="CSS3" />
@@ -511,7 +511,7 @@ Front-end e back-end são publicados em serviços separados, ambos sob HTTPS. O 
         <a href="https://github.com/paulahcarvalho"><img src="https://github.com/paulahcarvalho.png" width="70px" style="border-radius: 50%;" alt="Paula Carvalho"/><br><sub><b>Paula Carvalho</b></sub><br><sub>PO/PM Júnior</sub></a><br><a href="https://linkedin.com/in/paula-carvalho-390147108/"><img src="https://shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
       </td>
       <td align="center" width="120px">
-        <a href="https://github.com/carolseveroo"><img src="https://github.com/carolseveroo.png" width="70px" style="border-radius: 50%;" alt="Carol Severo"/><br><sub><b>Carol Severo</b></sub><br><sub>Mentora</sub></a><br><a href="https://www.linkedin.com/in/eucarolsevero"><img src="https://shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
+        <a href="https://github.com/eucarolsevero"><img src="https://github.com/eucarolsevero.png" width="70px" style="border-radius: 50%;" alt="Carol Severo"/><br><sub><b>Carol Severo</b></sub><br><sub>Mentora</sub></a><br><a href="https://www.linkedin.com/in/eucarolsevero"><img src="https://shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" height="15px"/></a>
 </td>
     </tr>
   </table>
@@ -524,5 +524,23 @@ Front-end e back-end são publicados em serviços separados, ambos sob HTTPS. O 
 ## Licença <a id="13-licenca"></a>
 
 Distribuído sob a licença MIT. Veja [`LICENSE`](LICENSE) para mais informações.
+
+<p align="right"><a href="#topo">Voltar ao topo</a></p>
+
+---
+
+<div align="center">
+
+## 🥉 Esta equipe ficou em 3º lugar no Hackathon SouJunior!
+
+</div>
+
+<img width="1452" height="814" alt="IMG-20260928-WA0075" src="https://github.com/user-attachments/assets/603b0716-3110-4600-81f1-d6f59345e2a9" />
+<div align="center">
+
+> Demonstrando uma excelente colaboração e produto inovador. O squad Girls In Cortex alcançou o terceiro lugar com uma entrega expressiva, com proposta de valor clara, forte trabalho em equipe multidisciplinar e soluções criativas para incentivar o engajamento da comunidade de tecnologia.
+> — SouJunior.
+
+### 💬🔗 *[Confira oque a própria **SouJunior** falou a respeito do top 3!](https://hackathon.soujunior.tech/#/11_ganhadores)*
 
 <p align="right"><a href="#topo">Voltar ao topo</a></p>
